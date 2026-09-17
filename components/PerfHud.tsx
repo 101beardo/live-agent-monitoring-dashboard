@@ -30,8 +30,14 @@ export function PerfHud({ id, children }: { id: string; children: ReactNode }) {
     s.commits += 1;
     s.totalActualMs += actualDuration;
 
+    // 3s, not 1s: the mock's per-event jitter (up to 400ms) plus batched
+    // dispatch means events cluster unevenly across animation frames, so a
+    // 1s window swung between 1 and 79 commits/s for the identical config —
+    // noise, not signal. 3s smooths that out enough to compare configs
+    // meaningfully. The doc comment above already said "~3s"; the code
+    // didn't match it until this fix.
     const elapsed = performance.now() - s.windowStart;
-    if (elapsed >= 1000) {
+    if (elapsed >= 3000) {
       setDisplay({
         commitsPerSec: Math.round((s.commits / elapsed) * 1000),
         avgMs: s.commits > 0 ? s.totalActualMs / s.commits : 0,
