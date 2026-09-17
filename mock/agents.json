@@ -1,0 +1,5630 @@
+{
+  "snapshotTakenAt": "2026-09-09T09:10:49Z",
+  "totalAgents": 300,
+  "agents": [
+    {
+      "agentId": "AG-1000",
+      "name": "Sneha Bose",
+      "extension": "2000",
+      "email": "sneha.bose@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:08Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1001",
+      "name": "Owen Bose",
+      "extension": "2001",
+      "email": "owen.bose@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000010",
+      "callStartedAt": "2026-09-09T09:06:58Z",
+      "statusChangedAt": "2026-09-09T09:07:10Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1002",
+      "name": "Divya Brennan",
+      "extension": "2002",
+      "email": "divya.brennan@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:10Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1003",
+      "name": "Marcus Bose",
+      "extension": "2003",
+      "email": "marcus.bose@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000018",
+      "callStartedAt": "2026-09-09T09:10:00Z",
+      "statusChangedAt": "2026-09-09T09:10:10Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1004",
+      "name": "Sophie Okonkwo",
+      "extension": "2004",
+      "email": "sophie.okonkwo@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000023",
+      "callStartedAt": "2026-09-09T09:05:30Z",
+      "statusChangedAt": "2026-09-09T09:08:15Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1005",
+      "name": "Siddharth Sharma",
+      "extension": "2005",
+      "email": "siddharth.sharma@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:25Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1006",
+      "name": "Ishita Malhotra",
+      "extension": "2006",
+      "email": "ishita.malhotra@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:30Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1007",
+      "name": "Emma Okonkwo",
+      "extension": "2007",
+      "email": "emma.okonkwo@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints",
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000035",
+      "callStartedAt": "2026-09-09T09:03:49Z",
+      "statusChangedAt": "2026-09-09T09:06:12Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1008",
+      "name": "Maya Dias",
+      "extension": "2008",
+      "email": "maya.dias@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:47Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1009",
+      "name": "Ruby Dias",
+      "extension": "2009",
+      "email": "ruby.dias@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:45Z",
+      "snapshotSeq": 14
+    },
+    {
+      "agentId": "AG-1010",
+      "name": "Karan Kulkarni",
+      "extension": "2010",
+      "email": "karan.kulkarni@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Ringing",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000044",
+      "callStartedAt": "2026-09-09T09:10:38Z",
+      "statusChangedAt": "2026-09-09T09:10:38Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1011",
+      "name": "Rohan Bose",
+      "extension": "2011",
+      "email": "rohan.bose@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000045",
+      "callStartedAt": "2026-09-09T09:03:34Z",
+      "statusChangedAt": "2026-09-09T09:06:14Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1012",
+      "name": "Daniel Novak",
+      "extension": "2012",
+      "email": "daniel.novak@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000049",
+      "callStartedAt": "2026-09-09T09:10:14Z",
+      "statusChangedAt": "2026-09-09T09:10:28Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1013",
+      "name": "Meera Pillai",
+      "extension": "2013",
+      "email": "meera.pillai@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Onboarding",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Unregistered",
+      "agentStatus": "LoggedOut",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:35Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1014",
+      "name": "Meera Novak",
+      "extension": "2014",
+      "email": "meera.novak@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:48Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1015",
+      "name": "Rahul Nair",
+      "extension": "2015",
+      "email": "rahul.nair@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Unregistered",
+      "agentStatus": "LoggedOut",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:06:31Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1016",
+      "name": "Arjun Menon",
+      "extension": "2016",
+      "email": "arjun.menon@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Sales",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:48Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1017",
+      "name": "Pooja Kulkarni",
+      "extension": "2017",
+      "email": "pooja.kulkarni@example-cx.com",
+      "queues": [
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:49Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1018",
+      "name": "Ananya Verma",
+      "extension": "2018",
+      "email": "ananya.verma@example-cx.com",
+      "queues": [
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:05Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1019",
+      "name": "Nikhil Bose",
+      "extension": "2019",
+      "email": "nikhil.bose@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:56Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1020",
+      "name": "Grace Hartley",
+      "extension": "2020",
+      "email": "grace.hartley@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:34Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1021",
+      "name": "Oscar Lindqvist",
+      "extension": "2021",
+      "email": "oscar.lindqvist@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000082",
+      "callStartedAt": "2026-09-09T09:07:19Z",
+      "statusChangedAt": "2026-09-09T09:07:36Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1022",
+      "name": "Arjun Hartley",
+      "extension": "2022",
+      "email": "arjun.hartley@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:59Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1023",
+      "name": "Rajat Malhotra",
+      "extension": "2023",
+      "email": "rajat.malhotra@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:06:05Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1024",
+      "name": "Riya Lindqvist",
+      "extension": "2024",
+      "email": "riya.lindqvist@example-cx.com",
+      "queues": [
+        "Billing",
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:34Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1025",
+      "name": "Nora Moreau",
+      "extension": "2025",
+      "email": "nora.moreau@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000101",
+      "callStartedAt": "2026-09-09T09:09:07Z",
+      "statusChangedAt": "2026-09-09T09:10:20Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1026",
+      "name": "Rajat Okonkwo",
+      "extension": "2026",
+      "email": "rajat.okonkwo@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:33Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1027",
+      "name": "Oscar Brennan",
+      "extension": "2027",
+      "email": "oscar.brennan@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Sales",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000111",
+      "callStartedAt": "2026-09-09T09:08:33Z",
+      "statusChangedAt": "2026-09-09T09:09:37Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1028",
+      "name": "Meera Lindqvist",
+      "extension": "2028",
+      "email": "meera.lindqvist@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:47Z",
+      "snapshotSeq": 17
+    },
+    {
+      "agentId": "AG-1029",
+      "name": "Siddharth Desai",
+      "extension": "2029",
+      "email": "siddharth.desai@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:14Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1030",
+      "name": "Anjali Dias",
+      "extension": "2030",
+      "email": "anjali.dias@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Onboarding",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000135",
+      "callStartedAt": "2026-09-09T09:09:31Z",
+      "statusChangedAt": "2026-09-09T09:09:45Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1031",
+      "name": "Riya Whitfield",
+      "extension": "2031",
+      "email": "riya.whitfield@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000146",
+      "callStartedAt": "2026-09-09T09:10:39Z",
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1032",
+      "name": "Liam Iyer",
+      "extension": "2032",
+      "email": "liam.iyer@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:45Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1033",
+      "name": "Arjun Kulkarni",
+      "extension": "2033",
+      "email": "arjun.kulkarni@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:27Z",
+      "snapshotSeq": 12
+    },
+    {
+      "agentId": "AG-1034",
+      "name": "Olivia Verma",
+      "extension": "2034",
+      "email": "olivia.verma@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000161",
+      "callStartedAt": "2026-09-09T09:08:19Z",
+      "statusChangedAt": "2026-09-09T09:08:38Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1035",
+      "name": "Shreya Hartley",
+      "extension": "2035",
+      "email": "shreya.hartley@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Ringing",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000170",
+      "callStartedAt": "2026-09-09T09:10:46Z",
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1036",
+      "name": "Rohan Whitfield",
+      "extension": "2036",
+      "email": "rohan.whitfield@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000177",
+      "callStartedAt": "2026-09-09T09:10:35Z",
+      "statusChangedAt": "2026-09-09T09:10:48Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1037",
+      "name": "Riya Kaminski",
+      "extension": "2037",
+      "email": "riya.kaminski@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:23Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1038",
+      "name": "Harsh Hartley",
+      "extension": "2038",
+      "email": "harsh.hartley@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000183",
+      "callStartedAt": "2026-09-09T09:06:39Z",
+      "statusChangedAt": "2026-09-09T09:10:23Z",
+      "snapshotSeq": 14
+    },
+    {
+      "agentId": "AG-1039",
+      "name": "Rohan Lindqvist",
+      "extension": "2039",
+      "email": "rohan.lindqvist@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Ringing",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000190",
+      "callStartedAt": "2026-09-09T09:10:44Z",
+      "statusChangedAt": "2026-09-09T09:10:44Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1040",
+      "name": "Liam Chauhan",
+      "extension": "2040",
+      "email": "liam.chauhan@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000194",
+      "callStartedAt": "2026-09-09T09:06:06Z",
+      "statusChangedAt": "2026-09-09T09:06:12Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1041",
+      "name": "Chloe Verma",
+      "extension": "2041",
+      "email": "chloe.verma@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:32Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1042",
+      "name": "Shreya Kaminski",
+      "extension": "2042",
+      "email": "shreya.kaminski@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000203",
+      "callStartedAt": "2026-09-09T09:02:28Z",
+      "statusChangedAt": "2026-09-09T09:07:34Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1043",
+      "name": "Sneha Pillai",
+      "extension": "2043",
+      "email": "sneha.pillai@example-cx.com",
+      "queues": [
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:00Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1044",
+      "name": "Diya Reddy",
+      "extension": "2044",
+      "email": "diya.reddy@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000214",
+      "callStartedAt": "2026-09-09T09:10:34Z",
+      "statusChangedAt": "2026-09-09T09:10:38Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1045",
+      "name": "Ethan Brennan",
+      "extension": "2045",
+      "email": "ethan.brennan@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000223",
+      "callStartedAt": "2026-09-09T09:07:49Z",
+      "statusChangedAt": "2026-09-09T09:09:00Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1046",
+      "name": "Aditya Malhotra",
+      "extension": "2046",
+      "email": "aditya.malhotra@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000231",
+      "callStartedAt": "2026-09-09T09:05:16Z",
+      "statusChangedAt": "2026-09-09T09:05:34Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1047",
+      "name": "Sophie Joshi",
+      "extension": "2047",
+      "email": "sophie.joshi@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000239",
+      "callStartedAt": "2026-09-09T09:05:22Z",
+      "statusChangedAt": "2026-09-09T09:09:23Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1048",
+      "name": "Aarav Novak",
+      "extension": "2048",
+      "email": "aarav.novak@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000245",
+      "callStartedAt": "2026-09-09T09:10:33Z",
+      "statusChangedAt": "2026-09-09T09:10:44Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1049",
+      "name": "Meera Reddy",
+      "extension": "2049",
+      "email": "meera.reddy@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000253",
+      "callStartedAt": "2026-09-09T09:03:41Z",
+      "statusChangedAt": "2026-09-09T09:06:27Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1050",
+      "name": "Sneha Brennan",
+      "extension": "2050",
+      "email": "sneha.brennan@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:38Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1051",
+      "name": "James Nair",
+      "extension": "2051",
+      "email": "james.nair@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:43Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1052",
+      "name": "Pooja Osei",
+      "extension": "2052",
+      "email": "pooja.osei@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Sales",
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000265",
+      "callStartedAt": "2026-09-09T09:02:26Z",
+      "statusChangedAt": "2026-09-09T09:05:21Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1053",
+      "name": "Marcus Hartley",
+      "extension": "2053",
+      "email": "marcus.hartley@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000274",
+      "callStartedAt": "2026-09-09T09:06:00Z",
+      "statusChangedAt": "2026-09-09T09:06:05Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1054",
+      "name": "Shreya Sharma",
+      "extension": "2054",
+      "email": "shreya.sharma@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000284",
+      "callStartedAt": "2026-09-09T09:05:02Z",
+      "statusChangedAt": "2026-09-09T09:06:19Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1055",
+      "name": "Chloe Malhotra",
+      "extension": "2055",
+      "email": "chloe.malhotra@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:27Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1056",
+      "name": "Emma Banerjee",
+      "extension": "2056",
+      "email": "emma.banerjee@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:09Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1057",
+      "name": "Leah Whitfield",
+      "extension": "2057",
+      "email": "leah.whitfield@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000303",
+      "callStartedAt": "2026-09-09T09:10:01Z",
+      "statusChangedAt": "2026-09-09T09:10:06Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1058",
+      "name": "Karan Pillai",
+      "extension": "2058",
+      "email": "karan.pillai@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:20Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1059",
+      "name": "Manav Patel",
+      "extension": "2059",
+      "email": "manav.patel@example-cx.com",
+      "queues": [
+        "Billing",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:04Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1060",
+      "name": "Grace Whitfield",
+      "extension": "2060",
+      "email": "grace.whitfield@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:27Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1061",
+      "name": "Amit Kapoor",
+      "extension": "2061",
+      "email": "amit.kapoor@example-cx.com",
+      "queues": [
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000327",
+      "callStartedAt": "2026-09-09T09:04:11Z",
+      "statusChangedAt": "2026-09-09T09:05:41Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1062",
+      "name": "Siddharth Kaminski",
+      "extension": "2062",
+      "email": "siddharth.kaminski@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000330",
+      "callStartedAt": "2026-09-09T09:09:11Z",
+      "statusChangedAt": "2026-09-09T09:09:37Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1063",
+      "name": "Neha Moreau",
+      "extension": "2063",
+      "email": "neha.moreau@example-cx.com",
+      "queues": [
+        "Sales",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000336",
+      "callStartedAt": "2026-09-09T09:04:08Z",
+      "statusChangedAt": "2026-09-09T09:05:33Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1064",
+      "name": "Karan Iyer",
+      "extension": "2064",
+      "email": "karan.iyer@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000341",
+      "callStartedAt": "2026-09-09T09:05:05Z",
+      "statusChangedAt": "2026-09-09T09:07:12Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1065",
+      "name": "Neha Banerjee",
+      "extension": "2065",
+      "email": "neha.banerjee@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000344",
+      "callStartedAt": "2026-09-09T09:09:58Z",
+      "statusChangedAt": "2026-09-09T09:10:16Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1066",
+      "name": "Sneha Novak",
+      "extension": "2066",
+      "email": "sneha.novak@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000350",
+      "callStartedAt": "2026-09-09T09:09:50Z",
+      "statusChangedAt": "2026-09-09T09:09:53Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1067",
+      "name": "Arjun Reddy",
+      "extension": "2067",
+      "email": "arjun.reddy@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Billing",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:06Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1068",
+      "name": "Divya Whitfield",
+      "extension": "2068",
+      "email": "divya.whitfield@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000368",
+      "callStartedAt": "2026-09-09T09:10:31Z",
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1069",
+      "name": "Theo Pillai",
+      "extension": "2069",
+      "email": "theo.pillai@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:13Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1070",
+      "name": "Pooja Kaminski",
+      "extension": "2070",
+      "email": "pooja.kaminski@example-cx.com",
+      "queues": [
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Ringing",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000376",
+      "callStartedAt": "2026-09-09T09:10:46Z",
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1071",
+      "name": "Divya Dias",
+      "extension": "2071",
+      "email": "divya.dias@example-cx.com",
+      "queues": [
+        "Sales",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000384",
+      "callStartedAt": "2026-09-09T09:03:37Z",
+      "statusChangedAt": "2026-09-09T09:08:00Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1072",
+      "name": "Ruby Okonkwo",
+      "extension": "2072",
+      "email": "ruby.okonkwo@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000392",
+      "callStartedAt": "2026-09-09T09:05:28Z",
+      "statusChangedAt": "2026-09-09T09:10:09Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1073",
+      "name": "Ruby Malhotra",
+      "extension": "2073",
+      "email": "ruby.malhotra@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000397",
+      "callStartedAt": "2026-09-09T09:10:05Z",
+      "statusChangedAt": "2026-09-09T09:10:12Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1074",
+      "name": "Ananya Iyer",
+      "extension": "2074",
+      "email": "ananya.iyer@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:34Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1075",
+      "name": "Emma Chauhan",
+      "extension": "2075",
+      "email": "emma.chauhan@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000407",
+      "callStartedAt": "2026-09-09T09:04:18Z",
+      "statusChangedAt": "2026-09-09T09:06:23Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1076",
+      "name": "James Verma",
+      "extension": "2076",
+      "email": "james.verma@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000416",
+      "callStartedAt": "2026-09-09T09:09:31Z",
+      "statusChangedAt": "2026-09-09T09:09:50Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1077",
+      "name": "Aarav Verma",
+      "extension": "2077",
+      "email": "aarav.verma@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000422",
+      "callStartedAt": "2026-09-09T09:08:24Z",
+      "statusChangedAt": "2026-09-09T09:10:11Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1078",
+      "name": "Ishita Reddy",
+      "extension": "2078",
+      "email": "ishita.reddy@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:13Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1079",
+      "name": "Grace Rao",
+      "extension": "2079",
+      "email": "grace.rao@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000426",
+      "callStartedAt": "2026-09-09T09:06:10Z",
+      "statusChangedAt": "2026-09-09T09:06:30Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1080",
+      "name": "Siddharth Okonkwo",
+      "extension": "2080",
+      "email": "siddharth.okonkwo@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:29Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1081",
+      "name": "Nisha Osei",
+      "extension": "2081",
+      "email": "nisha.osei@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:40Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1082",
+      "name": "Leah Bose",
+      "extension": "2082",
+      "email": "leah.bose@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:23Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1083",
+      "name": "Kavya Hartley",
+      "extension": "2083",
+      "email": "kavya.hartley@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:40Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1084",
+      "name": "Ethan Dias",
+      "extension": "2084",
+      "email": "ethan.dias@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000453",
+      "callStartedAt": "2026-09-09T09:09:47Z",
+      "statusChangedAt": "2026-09-09T09:10:03Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1085",
+      "name": "Grace Nair",
+      "extension": "2085",
+      "email": "grace.nair@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:48Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1086",
+      "name": "Liam Kulkarni",
+      "extension": "2086",
+      "email": "liam.kulkarni@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000459",
+      "callStartedAt": "2026-09-09T09:09:40Z",
+      "statusChangedAt": "2026-09-09T09:10:19Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1087",
+      "name": "Varun Iyer",
+      "extension": "2087",
+      "email": "varun.iyer@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:22Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1088",
+      "name": "Harsh Iyer",
+      "extension": "2088",
+      "email": "harsh.iyer@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000471",
+      "callStartedAt": "2026-09-09T09:04:50Z",
+      "statusChangedAt": "2026-09-09T09:06:52Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1089",
+      "name": "Kavya Brennan",
+      "extension": "2089",
+      "email": "kavya.brennan@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1090",
+      "name": "Varun Pillai",
+      "extension": "2090",
+      "email": "varun.pillai@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Technical Support",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000477",
+      "callStartedAt": "2026-09-09T09:09:46Z",
+      "statusChangedAt": "2026-09-09T09:10:00Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1091",
+      "name": "Kabir Rao",
+      "extension": "2091",
+      "email": "kabir.rao@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000485",
+      "callStartedAt": "2026-09-09T09:04:02Z",
+      "statusChangedAt": "2026-09-09T09:04:11Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1092",
+      "name": "Iris Kapoor",
+      "extension": "2092",
+      "email": "iris.kapoor@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000488",
+      "callStartedAt": "2026-09-09T09:09:47Z",
+      "statusChangedAt": "2026-09-09T09:10:03Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1093",
+      "name": "Ethan Bose",
+      "extension": "2093",
+      "email": "ethan.bose@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:17Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1094",
+      "name": "Ethan Menon",
+      "extension": "2094",
+      "email": "ethan.menon@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000496",
+      "callStartedAt": "2026-09-09T09:00:20Z",
+      "statusChangedAt": "2026-09-09T09:05:15Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1095",
+      "name": "Maya Moreau",
+      "extension": "2095",
+      "email": "maya.moreau@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:28Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1096",
+      "name": "Harsh Brennan",
+      "extension": "2096",
+      "email": "harsh.brennan@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:29Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1097",
+      "name": "James Novak",
+      "extension": "2097",
+      "email": "james.novak@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:31Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1098",
+      "name": "Neha Shetty",
+      "extension": "2098",
+      "email": "neha.shetty@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000520",
+      "callStartedAt": "2026-09-09T09:04:04Z",
+      "statusChangedAt": "2026-09-09T09:05:44Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1099",
+      "name": "Liam Reddy",
+      "extension": "2099",
+      "email": "liam.reddy@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000530",
+      "callStartedAt": "2026-09-09T09:08:59Z",
+      "statusChangedAt": "2026-09-09T09:09:13Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1100",
+      "name": "Varun Okonkwo",
+      "extension": "2100",
+      "email": "varun.okonkwo@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000534",
+      "callStartedAt": "2026-09-09T09:09:39Z",
+      "statusChangedAt": "2026-09-09T09:09:55Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1101",
+      "name": "Maya Iyer",
+      "extension": "2101",
+      "email": "maya.iyer@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:44Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1102",
+      "name": "Ananya Hartley",
+      "extension": "2102",
+      "email": "ananya.hartley@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:24Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1103",
+      "name": "Diya Joshi",
+      "extension": "2103",
+      "email": "diya.joshi@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000549",
+      "callStartedAt": "2026-09-09T09:03:48Z",
+      "statusChangedAt": "2026-09-09T09:07:44Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1104",
+      "name": "Olivia Patel",
+      "extension": "2104",
+      "email": "olivia.patel@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:35Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1105",
+      "name": "Kavya Novak",
+      "extension": "2105",
+      "email": "kavya.novak@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:58Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1106",
+      "name": "Kabir Patel",
+      "extension": "2106",
+      "email": "kabir.patel@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:13Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1107",
+      "name": "Theo Okonkwo",
+      "extension": "2107",
+      "email": "theo.okonkwo@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000564",
+      "callStartedAt": "2026-09-09T09:09:18Z",
+      "statusChangedAt": "2026-09-09T09:09:21Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1108",
+      "name": "Harsh Shetty",
+      "extension": "2108",
+      "email": "harsh.shetty@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:06:20Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1109",
+      "name": "Daniel Kaminski",
+      "extension": "2109",
+      "email": "daniel.kaminski@example-cx.com",
+      "queues": [
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:02Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1110",
+      "name": "Divya Verma",
+      "extension": "2110",
+      "email": "divya.verma@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:08Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1111",
+      "name": "Ishita Pillai",
+      "extension": "2111",
+      "email": "ishita.pillai@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:42Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1112",
+      "name": "Rohan Patel",
+      "extension": "2112",
+      "email": "rohan.patel@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:04:26Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1113",
+      "name": "Olivia Menon",
+      "extension": "2113",
+      "email": "olivia.menon@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Retentions",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:41Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1114",
+      "name": "Aditya Novak",
+      "extension": "2114",
+      "email": "aditya.novak@example-cx.com",
+      "queues": [
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000597",
+      "callStartedAt": "2026-09-09T09:08:13Z",
+      "statusChangedAt": "2026-09-09T09:08:27Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1115",
+      "name": "Ishita Patel",
+      "extension": "2115",
+      "email": "ishita.patel@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:06:10Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1116",
+      "name": "Arjun Shetty",
+      "extension": "2116",
+      "email": "arjun.shetty@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000605",
+      "callStartedAt": "2026-09-09T09:10:19Z",
+      "statusChangedAt": "2026-09-09T09:10:24Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1117",
+      "name": "Owen Sharma",
+      "extension": "2117",
+      "email": "owen.sharma@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000610",
+      "callStartedAt": "2026-09-09T09:09:23Z",
+      "statusChangedAt": "2026-09-09T09:09:59Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1118",
+      "name": "Amit Hartley",
+      "extension": "2118",
+      "email": "amit.hartley@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:47Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1119",
+      "name": "Siddharth Pillai",
+      "extension": "2119",
+      "email": "siddharth.pillai@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:06Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1120",
+      "name": "Hugo Brennan",
+      "extension": "2120",
+      "email": "hugo.brennan@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:12Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1121",
+      "name": "Rohan Mehta",
+      "extension": "2121",
+      "email": "rohan.mehta@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:14Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1122",
+      "name": "Theo Lindqvist",
+      "extension": "2122",
+      "email": "theo.lindqvist@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:34Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1123",
+      "name": "Manav Menon",
+      "extension": "2123",
+      "email": "manav.menon@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000638",
+      "callStartedAt": "2026-09-09T09:08:41Z",
+      "statusChangedAt": "2026-09-09T09:10:20Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1124",
+      "name": "Rahul Pillai",
+      "extension": "2124",
+      "email": "rahul.pillai@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Ringing",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000643",
+      "callStartedAt": "2026-09-09T09:10:34Z",
+      "statusChangedAt": "2026-09-09T09:10:34Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1125",
+      "name": "Daniel Menon",
+      "extension": "2125",
+      "email": "daniel.menon@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:38Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1126",
+      "name": "Nora Rao",
+      "extension": "2126",
+      "email": "nora.rao@example-cx.com",
+      "queues": [
+        "Sales",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:08Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1127",
+      "name": "Kabir Hartley",
+      "extension": "2127",
+      "email": "kabir.hartley@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000661",
+      "callStartedAt": "2026-09-09T09:10:21Z",
+      "statusChangedAt": "2026-09-09T09:10:36Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1128",
+      "name": "Amit Lindqvist",
+      "extension": "2128",
+      "email": "amit.lindqvist@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000665",
+      "callStartedAt": "2026-09-09T09:01:06Z",
+      "statusChangedAt": "2026-09-09T09:05:37Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1129",
+      "name": "Liam Malhotra",
+      "extension": "2129",
+      "email": "liam.malhotra@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:32Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1130",
+      "name": "Riya Osei",
+      "extension": "2130",
+      "email": "riya.osei@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:48Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1131",
+      "name": "Meera Malhotra",
+      "extension": "2131",
+      "email": "meera.malhotra@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000686",
+      "callStartedAt": "2026-09-09T09:08:22Z",
+      "statusChangedAt": "2026-09-09T09:10:18Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1132",
+      "name": "Aditya Iyer",
+      "extension": "2132",
+      "email": "aditya.iyer@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:44Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1133",
+      "name": "Ishita Kaminski",
+      "extension": "2133",
+      "email": "ishita.kaminski@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000696",
+      "callStartedAt": "2026-09-09T09:09:38Z",
+      "statusChangedAt": "2026-09-09T09:09:57Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1134",
+      "name": "James Brennan",
+      "extension": "2134",
+      "email": "james.brennan@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000701",
+      "callStartedAt": "2026-09-09T09:05:42Z",
+      "statusChangedAt": "2026-09-09T09:08:38Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1135",
+      "name": "Emma Lindqvist",
+      "extension": "2135",
+      "email": "emma.lindqvist@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000708",
+      "callStartedAt": "2026-09-09T09:10:24Z",
+      "statusChangedAt": "2026-09-09T09:10:31Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1136",
+      "name": "Arjun Mehta",
+      "extension": "2136",
+      "email": "arjun.mehta@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000711",
+      "callStartedAt": "2026-09-09T09:02:56Z",
+      "statusChangedAt": "2026-09-09T09:05:48Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1137",
+      "name": "Meera Patel",
+      "extension": "2137",
+      "email": "meera.patel@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000716",
+      "callStartedAt": "2026-09-09T09:10:34Z",
+      "statusChangedAt": "2026-09-09T09:10:38Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1138",
+      "name": "Siddharth Brennan",
+      "extension": "2138",
+      "email": "siddharth.brennan@example-cx.com",
+      "queues": [
+        "Billing",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000723",
+      "callStartedAt": "2026-09-09T09:05:54Z",
+      "statusChangedAt": "2026-09-09T09:07:06Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1139",
+      "name": "Amit Gupta",
+      "extension": "2139",
+      "email": "amit.gupta@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000727",
+      "callStartedAt": "2026-09-09T09:04:00Z",
+      "statusChangedAt": "2026-09-09T09:08:13Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1140",
+      "name": "Kavya Lindqvist",
+      "extension": "2140",
+      "email": "kavya.lindqvist@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000734",
+      "callStartedAt": "2026-09-09T09:03:02Z",
+      "statusChangedAt": "2026-09-09T09:04:12Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1141",
+      "name": "Riya Mehta",
+      "extension": "2141",
+      "email": "riya.mehta@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:23Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1142",
+      "name": "Anjali Mehta",
+      "extension": "2142",
+      "email": "anjali.mehta@example-cx.com",
+      "queues": [
+        "Sales",
+        "Technical Support",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:47Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1143",
+      "name": "Amit Okonkwo",
+      "extension": "2143",
+      "email": "amit.okonkwo@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:23Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1144",
+      "name": "Theo Dias",
+      "extension": "2144",
+      "email": "theo.dias@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:33Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1145",
+      "name": "Daniel Moreau",
+      "extension": "2145",
+      "email": "daniel.moreau@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000755",
+      "callStartedAt": "2026-09-09T09:02:54Z",
+      "statusChangedAt": "2026-09-09T09:06:47Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1146",
+      "name": "Aditya Moreau",
+      "extension": "2146",
+      "email": "aditya.moreau@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:41Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1147",
+      "name": "Felix Whitfield",
+      "extension": "2147",
+      "email": "felix.whitfield@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:23Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1148",
+      "name": "Pooja Novak",
+      "extension": "2148",
+      "email": "pooja.novak@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:38Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1149",
+      "name": "Shreya Verma",
+      "extension": "2149",
+      "email": "shreya.verma@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000768",
+      "callStartedAt": "2026-09-09T09:03:21Z",
+      "statusChangedAt": "2026-09-09T09:04:44Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1150",
+      "name": "Meera Okonkwo",
+      "extension": "2150",
+      "email": "meera.okonkwo@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Onboarding",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000772",
+      "callStartedAt": "2026-09-09T09:04:53Z",
+      "statusChangedAt": "2026-09-09T09:04:56Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1151",
+      "name": "Chloe Kaminski",
+      "extension": "2151",
+      "email": "chloe.kaminski@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:48Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1152",
+      "name": "Siddharth Reddy",
+      "extension": "2152",
+      "email": "siddharth.reddy@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:15Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1153",
+      "name": "Kavya Dias",
+      "extension": "2153",
+      "email": "kavya.dias@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000788",
+      "callStartedAt": "2026-09-09T09:10:20Z",
+      "statusChangedAt": "2026-09-09T09:10:25Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1154",
+      "name": "Nisha Menon",
+      "extension": "2154",
+      "email": "nisha.menon@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000795",
+      "callStartedAt": "2026-09-09T09:09:30Z",
+      "statusChangedAt": "2026-09-09T09:09:50Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1155",
+      "name": "Nikhil Whitfield",
+      "extension": "2155",
+      "email": "nikhil.whitfield@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support",
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:05Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1156",
+      "name": "Tanvi Novak",
+      "extension": "2156",
+      "email": "tanvi.novak@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:37Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1157",
+      "name": "Riya Nair",
+      "extension": "2157",
+      "email": "riya.nair@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:59Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1158",
+      "name": "Arjun Bose",
+      "extension": "2158",
+      "email": "arjun.bose@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:12Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1159",
+      "name": "Ananya Bose",
+      "extension": "2159",
+      "email": "ananya.bose@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000820",
+      "callStartedAt": "2026-09-09T09:05:26Z",
+      "statusChangedAt": "2026-09-09T09:05:44Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1160",
+      "name": "Arjun Moreau",
+      "extension": "2160",
+      "email": "arjun.moreau@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:27Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1161",
+      "name": "Leah Reddy",
+      "extension": "2161",
+      "email": "leah.reddy@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000836",
+      "callStartedAt": "2026-09-09T09:05:06Z",
+      "statusChangedAt": "2026-09-09T09:08:52Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1162",
+      "name": "Leah Sharma",
+      "extension": "2162",
+      "email": "leah.sharma@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:19Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1163",
+      "name": "Varun Hartley",
+      "extension": "2163",
+      "email": "varun.hartley@example-cx.com",
+      "queues": [
+        "Billing",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:49Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1164",
+      "name": "Sophie Gupta",
+      "extension": "2164",
+      "email": "sophie.gupta@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:14Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1165",
+      "name": "Iris Okonkwo",
+      "extension": "2165",
+      "email": "iris.okonkwo@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:04Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1166",
+      "name": "Kavya Gupta",
+      "extension": "2166",
+      "email": "kavya.gupta@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000861",
+      "callStartedAt": "2026-09-09T09:07:35Z",
+      "statusChangedAt": "2026-09-09T09:10:21Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1167",
+      "name": "Felix Brennan",
+      "extension": "2167",
+      "email": "felix.brennan@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000870",
+      "callStartedAt": "2026-09-09T09:09:03Z",
+      "statusChangedAt": "2026-09-09T09:09:21Z",
+      "snapshotSeq": 14
+    },
+    {
+      "agentId": "AG-1168",
+      "name": "Aditya Gupta",
+      "extension": "2168",
+      "email": "aditya.gupta@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:17Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1169",
+      "name": "Marcus Shetty",
+      "extension": "2169",
+      "email": "marcus.shetty@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:48Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1170",
+      "name": "Iris Iyer",
+      "extension": "2170",
+      "email": "iris.iyer@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000883",
+      "callStartedAt": "2026-09-09T09:09:18Z",
+      "statusChangedAt": "2026-09-09T09:09:21Z",
+      "snapshotSeq": 16
+    },
+    {
+      "agentId": "AG-1171",
+      "name": "Nora Gupta",
+      "extension": "2171",
+      "email": "nora.gupta@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000887",
+      "callStartedAt": "2026-09-09T09:05:47Z",
+      "statusChangedAt": "2026-09-09T09:05:58Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1172",
+      "name": "Maya Joshi",
+      "extension": "2172",
+      "email": "maya.joshi@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:02Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1173",
+      "name": "Nisha Kaminski",
+      "extension": "2173",
+      "email": "nisha.kaminski@example-cx.com",
+      "queues": [
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:16Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1174",
+      "name": "Kabir Verma",
+      "extension": "2174",
+      "email": "kabir.verma@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000902",
+      "callStartedAt": "2026-09-09T09:02:19Z",
+      "statusChangedAt": "2026-09-09T09:08:09Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1175",
+      "name": "Rohan Pillai",
+      "extension": "2175",
+      "email": "rohan.pillai@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:21Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1176",
+      "name": "Karan Patel",
+      "extension": "2176",
+      "email": "karan.patel@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000913",
+      "callStartedAt": "2026-09-09T09:08:47Z",
+      "statusChangedAt": "2026-09-09T09:10:31Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1177",
+      "name": "Harsh Osei",
+      "extension": "2177",
+      "email": "harsh.osei@example-cx.com",
+      "queues": [
+        "Billing",
+        "Sales",
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:10Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1178",
+      "name": "Rahul Chauhan",
+      "extension": "2178",
+      "email": "rahul.chauhan@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:33Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1179",
+      "name": "Amit Nair",
+      "extension": "2179",
+      "email": "amit.nair@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000933",
+      "callStartedAt": "2026-09-09T09:06:42Z",
+      "statusChangedAt": "2026-09-09T09:09:03Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1180",
+      "name": "Maya Malhotra",
+      "extension": "2180",
+      "email": "maya.malhotra@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Sales"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000936",
+      "callStartedAt": "2026-09-09T09:09:01Z",
+      "statusChangedAt": "2026-09-09T09:10:26Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1181",
+      "name": "Rahul Novak",
+      "extension": "2181",
+      "email": "rahul.novak@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000943",
+      "callStartedAt": "2026-09-09T09:10:40Z",
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1182",
+      "name": "Liam Lindqvist",
+      "extension": "2182",
+      "email": "liam.lindqvist@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000949",
+      "callStartedAt": "2026-09-09T09:08:27Z",
+      "statusChangedAt": "2026-09-09T09:10:12Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1183",
+      "name": "Kavya Mehta",
+      "extension": "2183",
+      "email": "kavya.mehta@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:47Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1184",
+      "name": "Marcus Gupta",
+      "extension": "2184",
+      "email": "marcus.gupta@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000961",
+      "callStartedAt": "2026-09-09T09:10:06Z",
+      "statusChangedAt": "2026-09-09T09:10:14Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1185",
+      "name": "Grace Lindqvist",
+      "extension": "2185",
+      "email": "grace.lindqvist@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:02Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1186",
+      "name": "Marcus Malhotra",
+      "extension": "2186",
+      "email": "marcus.malhotra@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000966",
+      "callStartedAt": "2026-09-09T09:09:29Z",
+      "statusChangedAt": "2026-09-09T09:09:46Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1187",
+      "name": "Nisha Mehta",
+      "extension": "2187",
+      "email": "nisha.mehta@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000973",
+      "callStartedAt": "2026-09-09T09:04:05Z",
+      "statusChangedAt": "2026-09-09T09:09:30Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1188",
+      "name": "Oscar Kapoor",
+      "extension": "2188",
+      "email": "oscar.kapoor@example-cx.com",
+      "queues": [
+        "Billing",
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000982",
+      "callStartedAt": "2026-09-09T09:10:21Z",
+      "statusChangedAt": "2026-09-09T09:10:26Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1189",
+      "name": "Marcus Patel",
+      "extension": "2189",
+      "email": "marcus.patel@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000988",
+      "callStartedAt": "2026-09-09T09:02:37Z",
+      "statusChangedAt": "2026-09-09T09:05:15Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1190",
+      "name": "Neha Brennan",
+      "extension": "2190",
+      "email": "neha.brennan@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Sales",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:14Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1191",
+      "name": "Riya Rao",
+      "extension": "2191",
+      "email": "riya.rao@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-000995",
+      "callStartedAt": "2026-09-09T09:04:24Z",
+      "statusChangedAt": "2026-09-09T09:09:31Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1192",
+      "name": "Oscar Malhotra",
+      "extension": "2192",
+      "email": "oscar.malhotra@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001004",
+      "callStartedAt": "2026-09-09T09:02:55Z",
+      "statusChangedAt": "2026-09-09T09:06:53Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1193",
+      "name": "Arjun Lindqvist",
+      "extension": "2193",
+      "email": "arjun.lindqvist@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:33Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1194",
+      "name": "Oscar Chauhan",
+      "extension": "2194",
+      "email": "oscar.chauhan@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:44Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1195",
+      "name": "Rahul Rao",
+      "extension": "2195",
+      "email": "rahul.rao@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:42Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1196",
+      "name": "Pooja Reddy",
+      "extension": "2196",
+      "email": "pooja.reddy@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:06Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1197",
+      "name": "Owen Osei",
+      "extension": "2197",
+      "email": "owen.osei@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:38Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1198",
+      "name": "Ruby Kaminski",
+      "extension": "2198",
+      "email": "ruby.kaminski@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001035",
+      "callStartedAt": "2026-09-09T09:03:14Z",
+      "statusChangedAt": "2026-09-09T09:05:11Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1199",
+      "name": "Oscar Novak",
+      "extension": "2199",
+      "email": "oscar.novak@example-cx.com",
+      "queues": [
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001040",
+      "callStartedAt": "2026-09-09T09:09:31Z",
+      "statusChangedAt": "2026-09-09T09:09:49Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1200",
+      "name": "Rahul Sharma",
+      "extension": "2200",
+      "email": "rahul.sharma@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001042",
+      "callStartedAt": "2026-09-09T09:04:34Z",
+      "statusChangedAt": "2026-09-09T09:06:52Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1201",
+      "name": "Aditya Pillai",
+      "extension": "2201",
+      "email": "aditya.pillai@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:02Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1202",
+      "name": "Iris Bose",
+      "extension": "2202",
+      "email": "iris.bose@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:58Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1203",
+      "name": "Vikram Hartley",
+      "extension": "2203",
+      "email": "vikram.hartley@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001059",
+      "callStartedAt": "2026-09-09T09:05:57Z",
+      "statusChangedAt": "2026-09-09T09:08:29Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1204",
+      "name": "Riya Menon",
+      "extension": "2204",
+      "email": "riya.menon@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001068",
+      "callStartedAt": "2026-09-09T09:09:39Z",
+      "statusChangedAt": "2026-09-09T09:09:56Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1205",
+      "name": "Chloe Sharma",
+      "extension": "2205",
+      "email": "chloe.sharma@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:38Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1206",
+      "name": "Ethan Kaminski",
+      "extension": "2206",
+      "email": "ethan.kaminski@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:54Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1207",
+      "name": "Divya Kapoor",
+      "extension": "2207",
+      "email": "divya.kapoor@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:45Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1208",
+      "name": "Rahul Brennan",
+      "extension": "2208",
+      "email": "rahul.brennan@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:17Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1209",
+      "name": "Theo Shetty",
+      "extension": "2209",
+      "email": "theo.shetty@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001092",
+      "callStartedAt": "2026-09-09T09:03:59Z",
+      "statusChangedAt": "2026-09-09T09:07:50Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1210",
+      "name": "Anjali Pillai",
+      "extension": "2210",
+      "email": "anjali.pillai@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:06:51Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1211",
+      "name": "Divya Rao",
+      "extension": "2211",
+      "email": "divya.rao@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Retentions",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:23Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1212",
+      "name": "Kavya Rao",
+      "extension": "2212",
+      "email": "kavya.rao@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001106",
+      "callStartedAt": "2026-09-09T09:04:10Z",
+      "statusChangedAt": "2026-09-09T09:08:11Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1213",
+      "name": "James Sharma",
+      "extension": "2213",
+      "email": "james.sharma@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001109",
+      "callStartedAt": "2026-09-09T09:06:58Z",
+      "statusChangedAt": "2026-09-09T09:09:49Z",
+      "snapshotSeq": 15
+    },
+    {
+      "agentId": "AG-1214",
+      "name": "Pooja Kapoor",
+      "extension": "2214",
+      "email": "pooja.kapoor@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001118",
+      "callStartedAt": "2026-09-09T09:08:45Z",
+      "statusChangedAt": "2026-09-09T09:08:56Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1215",
+      "name": "Daniel Desai",
+      "extension": "2215",
+      "email": "daniel.desai@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:08Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1216",
+      "name": "Nisha Pillai",
+      "extension": "2216",
+      "email": "nisha.pillai@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001131",
+      "callStartedAt": "2026-09-09T09:05:05Z",
+      "statusChangedAt": "2026-09-09T09:05:09Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1217",
+      "name": "Rohan Brennan",
+      "extension": "2217",
+      "email": "rohan.brennan@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:08Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1218",
+      "name": "Emma Malhotra",
+      "extension": "2218",
+      "email": "emma.malhotra@example-cx.com",
+      "queues": [
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001143",
+      "callStartedAt": "2026-09-09T09:05:49Z",
+      "statusChangedAt": "2026-09-09T09:09:14Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1219",
+      "name": "Theo Joshi",
+      "extension": "2219",
+      "email": "theo.joshi@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions",
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:18Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1220",
+      "name": "Rahul Banerjee",
+      "extension": "2220",
+      "email": "rahul.banerjee@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:35Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1221",
+      "name": "Ananya Reddy",
+      "extension": "2221",
+      "email": "ananya.reddy@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:18Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1222",
+      "name": "Karan Mehta",
+      "extension": "2222",
+      "email": "karan.mehta@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:04Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1223",
+      "name": "Maya Hartley",
+      "extension": "2223",
+      "email": "maya.hartley@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions",
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001169",
+      "callStartedAt": "2026-09-09T09:07:44Z",
+      "statusChangedAt": "2026-09-09T09:08:36Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1224",
+      "name": "Anjali Verma",
+      "extension": "2224",
+      "email": "anjali.verma@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Billing",
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:41Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1225",
+      "name": "Karan Rao",
+      "extension": "2225",
+      "email": "karan.rao@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001180",
+      "callStartedAt": "2026-09-09T09:03:27Z",
+      "statusChangedAt": "2026-09-09T09:08:09Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1226",
+      "name": "Vikram Malhotra",
+      "extension": "2226",
+      "email": "vikram.malhotra@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001184",
+      "callStartedAt": "2026-09-09T09:09:48Z",
+      "statusChangedAt": "2026-09-09T09:10:38Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1227",
+      "name": "Marcus Kapoor",
+      "extension": "2227",
+      "email": "marcus.kapoor@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:35Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1228",
+      "name": "Amit Iyer",
+      "extension": "2228",
+      "email": "amit.iyer@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001194",
+      "callStartedAt": "2026-09-09T09:05:37Z",
+      "statusChangedAt": "2026-09-09T09:10:40Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1229",
+      "name": "Tanvi Banerjee",
+      "extension": "2229",
+      "email": "tanvi.banerjee@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:12Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1230",
+      "name": "Olivia Joshi",
+      "extension": "2230",
+      "email": "olivia.joshi@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:20Z",
+      "snapshotSeq": 16
+    },
+    {
+      "agentId": "AG-1231",
+      "name": "Neha Patel",
+      "extension": "2231",
+      "email": "neha.patel@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001209",
+      "callStartedAt": "2026-09-09T09:10:00Z",
+      "statusChangedAt": "2026-09-09T09:10:17Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1232",
+      "name": "Anjali Sharma",
+      "extension": "2232",
+      "email": "anjali.sharma@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:10Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1233",
+      "name": "Anjali Desai",
+      "extension": "2233",
+      "email": "anjali.desai@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:26Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1234",
+      "name": "Ananya Banerjee",
+      "extension": "2234",
+      "email": "ananya.banerjee@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Sales",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:46Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1235",
+      "name": "Oscar Nair",
+      "extension": "2235",
+      "email": "oscar.nair@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:13Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1236",
+      "name": "Ishita Lindqvist",
+      "extension": "2236",
+      "email": "ishita.lindqvist@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001225",
+      "callStartedAt": "2026-09-09T09:09:20Z",
+      "statusChangedAt": "2026-09-09T09:10:03Z",
+      "snapshotSeq": 12
+    },
+    {
+      "agentId": "AG-1237",
+      "name": "Ananya Kulkarni",
+      "extension": "2237",
+      "email": "ananya.kulkarni@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Billing",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:19Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1238",
+      "name": "Aditya Okonkwo",
+      "extension": "2238",
+      "email": "aditya.okonkwo@example-cx.com",
+      "queues": [
+        "Billing",
+        "Sales",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001231",
+      "callStartedAt": "2026-09-09T09:06:32Z",
+      "statusChangedAt": "2026-09-09T09:09:06Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1239",
+      "name": "Chloe Lindqvist",
+      "extension": "2239",
+      "email": "chloe.lindqvist@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001240",
+      "callStartedAt": "2026-09-09T09:08:42Z",
+      "statusChangedAt": "2026-09-09T09:10:31Z",
+      "snapshotSeq": 15
+    },
+    {
+      "agentId": "AG-1240",
+      "name": "Vikram Gupta",
+      "extension": "2240",
+      "email": "vikram.gupta@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001249",
+      "callStartedAt": "2026-09-09T09:10:13Z",
+      "statusChangedAt": "2026-09-09T09:10:29Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1241",
+      "name": "Divya Iyer",
+      "extension": "2241",
+      "email": "divya.iyer@example-cx.com",
+      "queues": [
+        "Sales",
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001251",
+      "callStartedAt": "2026-09-09T09:05:23Z",
+      "statusChangedAt": "2026-09-09T09:09:48Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1242",
+      "name": "Vikram Mehta",
+      "extension": "2242",
+      "email": "vikram.mehta@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Sales",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001261",
+      "callStartedAt": "2026-09-09T09:07:47Z",
+      "statusChangedAt": "2026-09-09T09:09:06Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1243",
+      "name": "Iris Pillai",
+      "extension": "2243",
+      "email": "iris.pillai@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001266",
+      "callStartedAt": "2026-09-09T09:10:32Z",
+      "statusChangedAt": "2026-09-09T09:10:41Z",
+      "snapshotSeq": 12
+    },
+    {
+      "agentId": "AG-1244",
+      "name": "Priya Joshi",
+      "extension": "2244",
+      "email": "priya.joshi@example-cx.com",
+      "queues": [
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001270",
+      "callStartedAt": "2026-09-09T09:09:53Z",
+      "statusChangedAt": "2026-09-09T09:10:11Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1245",
+      "name": "Sneha Banerjee",
+      "extension": "2245",
+      "email": "sneha.banerjee@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions",
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:07:49Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1246",
+      "name": "Ananya Nair",
+      "extension": "2246",
+      "email": "ananya.nair@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001284",
+      "callStartedAt": "2026-09-09T09:10:34Z",
+      "statusChangedAt": "2026-09-09T09:10:38Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1247",
+      "name": "Owen Mehta",
+      "extension": "2247",
+      "email": "owen.mehta@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:07Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1248",
+      "name": "Daniel Hartley",
+      "extension": "2248",
+      "email": "daniel.hartley@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:46Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1249",
+      "name": "Ananya Sharma",
+      "extension": "2249",
+      "email": "ananya.sharma@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:20Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1250",
+      "name": "Emma Mehta",
+      "extension": "2250",
+      "email": "emma.mehta@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:06:41Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1251",
+      "name": "Olivia Brennan",
+      "extension": "2251",
+      "email": "olivia.brennan@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001307",
+      "callStartedAt": "2026-09-09T09:10:08Z",
+      "statusChangedAt": "2026-09-09T09:10:24Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1252",
+      "name": "Divya Osei",
+      "extension": "2252",
+      "email": "divya.osei@example-cx.com",
+      "queues": [
+        "Sales",
+        "Onboarding",
+        "Complaints"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:16Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1253",
+      "name": "Iris Dias",
+      "extension": "2253",
+      "email": "iris.dias@example-cx.com",
+      "queues": [
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001315",
+      "callStartedAt": "2026-09-09T09:09:05Z",
+      "statusChangedAt": "2026-09-09T09:09:08Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1254",
+      "name": "Ruby Reddy",
+      "extension": "2254",
+      "email": "ruby.reddy@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001319",
+      "callStartedAt": "2026-09-09T09:05:29Z",
+      "statusChangedAt": "2026-09-09T09:08:50Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1255",
+      "name": "Priya Patel",
+      "extension": "2255",
+      "email": "priya.patel@example-cx.com",
+      "queues": [
+        "Technical Support",
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001328",
+      "callStartedAt": "2026-09-09T09:09:07Z",
+      "statusChangedAt": "2026-09-09T09:09:19Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1256",
+      "name": "Maya Desai",
+      "extension": "2256",
+      "email": "maya.desai@example-cx.com",
+      "queues": [
+        "Sales",
+        "Onboarding",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:36Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1257",
+      "name": "Liam Dias",
+      "extension": "2257",
+      "email": "liam.dias@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:00Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1258",
+      "name": "Arjun Chauhan",
+      "extension": "2258",
+      "email": "arjun.chauhan@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints",
+        "Billing"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001342",
+      "callStartedAt": "2026-09-09T09:07:31Z",
+      "statusChangedAt": "2026-09-09T09:07:50Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1259",
+      "name": "Siddharth Moreau",
+      "extension": "2259",
+      "email": "siddharth.moreau@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:44Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1260",
+      "name": "Ishita Brennan",
+      "extension": "2260",
+      "email": "ishita.brennan@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Sales"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:31Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1261",
+      "name": "Priya Iyer",
+      "extension": "2261",
+      "email": "priya.iyer@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:58Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1262",
+      "name": "Aarav Dias",
+      "extension": "2262",
+      "email": "aarav.dias@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001366",
+      "callStartedAt": "2026-09-09T09:09:50Z",
+      "statusChangedAt": "2026-09-09T09:10:03Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1263",
+      "name": "Siddharth Osei",
+      "extension": "2263",
+      "email": "siddharth.osei@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:18Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1264",
+      "name": "Owen Novak",
+      "extension": "2264",
+      "email": "owen.novak@example-cx.com",
+      "queues": [
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001375",
+      "callStartedAt": "2026-09-09T09:10:26Z",
+      "statusChangedAt": "2026-09-09T09:10:35Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1265",
+      "name": "Ruby Menon",
+      "extension": "2265",
+      "email": "ruby.menon@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:02Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1266",
+      "name": "Ruby Moreau",
+      "extension": "2266",
+      "email": "ruby.moreau@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001383",
+      "callStartedAt": "2026-09-09T09:04:29Z",
+      "statusChangedAt": "2026-09-09T09:09:32Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1267",
+      "name": "Marcus Osei",
+      "extension": "2267",
+      "email": "marcus.osei@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:50Z",
+      "snapshotSeq": 15
+    },
+    {
+      "agentId": "AG-1268",
+      "name": "Tanvi Rao",
+      "extension": "2268",
+      "email": "tanvi.rao@example-cx.com",
+      "queues": [
+        "Sales",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:17Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1269",
+      "name": "Nikhil Hartley",
+      "extension": "2269",
+      "email": "nikhil.hartley@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001395",
+      "callStartedAt": "2026-09-09T09:08:45Z",
+      "statusChangedAt": "2026-09-09T09:08:50Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1270",
+      "name": "Daniel Brennan",
+      "extension": "2270",
+      "email": "daniel.brennan@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:56Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1271",
+      "name": "Karan Kaminski",
+      "extension": "2271",
+      "email": "karan.kaminski@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001406",
+      "callStartedAt": "2026-09-09T09:04:18Z",
+      "statusChangedAt": "2026-09-09T09:08:50Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1272",
+      "name": "Aditya Whitfield",
+      "extension": "2272",
+      "email": "aditya.whitfield@example-cx.com",
+      "queues": [
+        "Sales",
+        "Technical Support",
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:04:48Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1273",
+      "name": "Aarav Nair",
+      "extension": "2273",
+      "email": "aarav.nair@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001415",
+      "callStartedAt": "2026-09-09T09:04:32Z",
+      "statusChangedAt": "2026-09-09T09:10:10Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1274",
+      "name": "Felix Pillai",
+      "extension": "2274",
+      "email": "felix.pillai@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001425",
+      "callStartedAt": "2026-09-09T09:08:13Z",
+      "statusChangedAt": "2026-09-09T09:08:32Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1275",
+      "name": "Riya Chauhan",
+      "extension": "2275",
+      "email": "riya.chauhan@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:51Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1276",
+      "name": "Daniel Malhotra",
+      "extension": "2276",
+      "email": "daniel.malhotra@example-cx.com",
+      "queues": [
+        "Sales",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:54Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1277",
+      "name": "Kavya Patel",
+      "extension": "2277",
+      "email": "kavya.patel@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Technical Support"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001444",
+      "callStartedAt": "2026-09-09T09:10:22Z",
+      "statusChangedAt": "2026-09-09T09:10:35Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1278",
+      "name": "Rahul Verma",
+      "extension": "2278",
+      "email": "rahul.verma@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001450",
+      "callStartedAt": "2026-09-09T09:10:27Z",
+      "statusChangedAt": "2026-09-09T09:10:30Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1279",
+      "name": "Ethan Hartley",
+      "extension": "2279",
+      "email": "ethan.hartley@example-cx.com",
+      "queues": [
+        "Billing",
+        "Retentions",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001458",
+      "callStartedAt": "2026-09-09T09:03:05Z",
+      "statusChangedAt": "2026-09-09T09:06:16Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1280",
+      "name": "Siddharth Bose",
+      "extension": "2280",
+      "email": "siddharth.bose@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001469",
+      "callStartedAt": "2026-09-09T09:08:56Z",
+      "statusChangedAt": "2026-09-09T09:09:09Z",
+      "snapshotSeq": 13
+    },
+    {
+      "agentId": "AG-1281",
+      "name": "Liam Sharma",
+      "extension": "2281",
+      "email": "liam.sharma@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001474",
+      "callStartedAt": "2026-09-09T09:05:08Z",
+      "statusChangedAt": "2026-09-09T09:06:29Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1282",
+      "name": "Vikram Novak",
+      "extension": "2282",
+      "email": "vikram.novak@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Billing",
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "London",
+      "shiftStart": "09:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001480",
+      "callStartedAt": "2026-09-09T09:07:36Z",
+      "statusChangedAt": "2026-09-09T09:07:49Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1283",
+      "name": "Nikhil Desai",
+      "extension": "2283",
+      "email": "nikhil.desai@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001488",
+      "callStartedAt": "2026-09-09T09:03:49Z",
+      "statusChangedAt": "2026-09-09T09:08:56Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1284",
+      "name": "Daniel Patel",
+      "extension": "2284",
+      "email": "daniel.patel@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Technical Support"
+      ],
+      "team": "Team Alpha",
+      "site": "Manchester",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:26Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1285",
+      "name": "James Joshi",
+      "extension": "2285",
+      "email": "james.joshi@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Billing"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001499",
+      "callStartedAt": "2026-09-09T09:09:12Z",
+      "statusChangedAt": "2026-09-09T09:09:21Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1286",
+      "name": "Nisha Brennan",
+      "extension": "2286",
+      "email": "nisha.brennan@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Onboarding"
+      ],
+      "team": "Team Delta",
+      "site": "London",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:42Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1287",
+      "name": "Ananya Dias",
+      "extension": "2287",
+      "email": "ananya.dias@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Billing",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001511",
+      "callStartedAt": "2026-09-09T09:08:30Z",
+      "statusChangedAt": "2026-09-09T09:10:03Z",
+      "snapshotSeq": 12
+    },
+    {
+      "agentId": "AG-1288",
+      "name": "Leah Chauhan",
+      "extension": "2288",
+      "email": "leah.chauhan@example-cx.com",
+      "queues": [
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:36Z",
+      "snapshotSeq": 11
+    },
+    {
+      "agentId": "AG-1289",
+      "name": "Felix Shetty",
+      "extension": "2289",
+      "email": "felix.shetty@example-cx.com",
+      "queues": [
+        "Sales"
+      ],
+      "team": "Team Alpha",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001528",
+      "callStartedAt": "2026-09-09T09:05:46Z",
+      "statusChangedAt": "2026-09-09T09:07:33Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1290",
+      "name": "Diya Sharma",
+      "extension": "2290",
+      "email": "diya.sharma@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "06:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001534",
+      "callStartedAt": "2026-09-09T09:03:48Z",
+      "statusChangedAt": "2026-09-09T09:06:52Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1291",
+      "name": "Aditya Rao",
+      "extension": "2291",
+      "email": "aditya.rao@example-cx.com",
+      "queues": [
+        "Complaints",
+        "Technical Support"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001543",
+      "callStartedAt": "2026-09-09T09:09:51Z",
+      "statusChangedAt": "2026-09-09T09:10:03Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1292",
+      "name": "Anjali Malhotra",
+      "extension": "2292",
+      "email": "anjali.malhotra@example-cx.com",
+      "queues": [
+        "Retentions",
+        "Technical Support",
+        "Complaints"
+      ],
+      "team": "Team Alpha",
+      "site": "London",
+      "shiftStart": "06:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "OnBreak",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:08:33Z",
+      "snapshotSeq": 9
+    },
+    {
+      "agentId": "AG-1293",
+      "name": "Diya Kapoor",
+      "extension": "2293",
+      "email": "diya.kapoor@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001555",
+      "callStartedAt": "2026-09-09T09:04:36Z",
+      "statusChangedAt": "2026-09-09T09:05:58Z",
+      "snapshotSeq": 6
+    },
+    {
+      "agentId": "AG-1294",
+      "name": "Tanvi Iyer",
+      "extension": "2294",
+      "email": "tanvi.iyer@example-cx.com",
+      "queues": [
+        "Billing",
+        "Technical Support"
+      ],
+      "team": "Team Delta",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "AfterCallWork",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:46Z",
+      "snapshotSeq": 8
+    },
+    {
+      "agentId": "AG-1295",
+      "name": "Owen Reddy",
+      "extension": "2295",
+      "email": "owen.reddy@example-cx.com",
+      "queues": [
+        "Complaints"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "OnHold",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001565",
+      "callStartedAt": "2026-09-09T09:10:05Z",
+      "statusChangedAt": "2026-09-09T09:10:26Z",
+      "snapshotSeq": 10
+    },
+    {
+      "agentId": "AG-1296",
+      "name": "Neha Kulkarni",
+      "extension": "2296",
+      "email": "neha.kulkarni@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Charlie",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:10:40Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1297",
+      "name": "Theo Gupta",
+      "extension": "2297",
+      "email": "theo.gupta@example-cx.com",
+      "queues": [
+        "Retentions"
+      ],
+      "team": "Team Charlie",
+      "site": "Manchester",
+      "shiftStart": "09:00",
+      "deviceStatus": "CallEnded",
+      "agentStatus": "Available",
+      "currentCallId": null,
+      "callStartedAt": null,
+      "statusChangedAt": "2026-09-09T09:09:38Z",
+      "snapshotSeq": 7
+    },
+    {
+      "agentId": "AG-1298",
+      "name": "Daniel Osei",
+      "extension": "2298",
+      "email": "daniel.osei@example-cx.com",
+      "queues": [
+        "Onboarding"
+      ],
+      "team": "Team Bravo",
+      "site": "Bangalore",
+      "shiftStart": "18:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001585",
+      "callStartedAt": "2026-09-09T09:05:49Z",
+      "statusChangedAt": "2026-09-09T09:05:54Z",
+      "snapshotSeq": 4
+    },
+    {
+      "agentId": "AG-1299",
+      "name": "Vikram Bose",
+      "extension": "2299",
+      "email": "vikram.bose@example-cx.com",
+      "queues": [
+        "Onboarding",
+        "Technical Support",
+        "Billing"
+      ],
+      "team": "Team Delta",
+      "site": "Bangalore",
+      "shiftStart": "13:00",
+      "deviceStatus": "Answered",
+      "agentStatus": "Available",
+      "currentCallId": "CALL-001591",
+      "callStartedAt": "2026-09-09T09:10:14Z",
+      "statusChangedAt": "2026-09-09T09:10:30Z",
+      "snapshotSeq": 9
+    }
+  ]
+}
