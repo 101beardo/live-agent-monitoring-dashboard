@@ -38,7 +38,7 @@ function AgentRowImpl({
 
   return (
     <div
-      className={`grid-row${attention ? " row-attention" : ""}`}
+      className={`grid-row cursor-pointer hover:bg-white/3 ${attention ? "bg-status-red/6" : ""}`}
       style={style}
       role="row"
       onClick={() => onSelect(agent.agentId)}

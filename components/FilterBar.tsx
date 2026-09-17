@@ -1,7 +1,7 @@
 "use client";
 
 import type { CombinedStatus } from "../lib/types";
-import { useFilters } from "../hooks/useFilters";
+import { hasActiveFilters, useFilters } from "../hooks/useFilters";
 
 const STATE_OPTIONS: { value: string; label: string }[] = [
   { value: "all", label: "All states" },
@@ -28,9 +28,10 @@ export function FilterBar({
   const { filters, setFilters } = useFilters();
 
   return (
-    <div className="filter-bar">
+    <div className="flex items-center gap-2.5 mt-3.5 mb-2.5 flex-wrap">
       <select
         aria-label="Filter by state"
+        className="bg-panel text-ink border border-border rounded-md px-2 py-1.5"
         value={filters.state}
         onChange={(e) => setFilters({ state: e.target.value })}
       >
@@ -43,6 +44,7 @@ export function FilterBar({
 
       <select
         aria-label="Filter by queue"
+        className="bg-panel text-ink border border-border rounded-md px-2 py-1.5"
         value={filters.queue}
         onChange={(e) => setFilters({ queue: e.target.value })}
       >
@@ -56,6 +58,7 @@ export function FilterBar({
 
       <select
         aria-label="Filter by site"
+        className="bg-panel text-ink border border-border rounded-md px-2 py-1.5"
         value={filters.site}
         onChange={(e) => setFilters({ site: e.target.value })}
       >
@@ -67,7 +70,7 @@ export function FilterBar({
         ))}
       </select>
 
-      {(filters.state !== "all" || filters.queue !== "all" || filters.site !== "all") && (
+      {hasActiveFilters(filters) && (
         <button
           type="button"
           className="btn-ghost"
@@ -77,7 +80,7 @@ export function FilterBar({
         </button>
       )}
 
-      <span className="filter-count">
+      <span className="text-muted ml-auto">
         {visibleCount} / {totalCount} agents
       </span>
     </div>

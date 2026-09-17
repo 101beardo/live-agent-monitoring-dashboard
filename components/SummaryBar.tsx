@@ -28,15 +28,15 @@ export function SummaryBar({ agents, now }: { agents: AgentState[]; now: number 
   }, [agents, now]);
 
   return (
-    <div className="summary-bar">
+    <div className="flex gap-4.5 flex-wrap pt-2 pb-3.5 text-muted border-b border-border mb-2.5">
       {ORDER.filter((k) => counts[k]).map((k) => (
-        <span key={k} className="summary-item">
-          <b>{counts[k]}</b> {k.replace("-", " ")}
+        <span key={k}>
+          <b className="text-ink">{counts[k]}</b> {k.replace("-", " ")}
         </span>
       ))}
       {longestCallSeconds > 0 && (
-        <span className="summary-item">
-          longest call <b>{Math.floor(longestCallSeconds / 60)}m</b>
+        <span>
+          longest call <b className="text-ink">{Math.floor(longestCallSeconds / 60)}m</b>
         </span>
       )}
     </div>

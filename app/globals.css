@@ -1,173 +1,112 @@
-:root {
-  --bg: #0d1117;
-  --panel: #151b23;
-  --border: #2a313c;
-  --text: #e6e8eb;
-  --muted: #8b949e;
-  --accent: #4c8dff;
+@import "tailwindcss";
 
-  --green: #2ea043;
-  --green-bg: rgba(46, 160, 67, 0.15);
-  --amber: #d29922;
-  --amber-bg: rgba(210, 153, 34, 0.15);
-  --red: #f85149;
-  --red-bg: rgba(248, 81, 73, 0.15);
-  --blue: #4c8dff;
-  --blue-bg: rgba(76, 141, 255, 0.15);
-  --slate: #8b949e;
-  --slate-bg: rgba(139, 148, 158, 0.15);
+/*
+ * Tailwind v4 is CSS-first config — no tailwind.config.js needed. This
+ * @theme block is the single source of truth for the dark dashboard palette,
+ * generating real utilities (bg-panel, text-status-green, border-status-red,
+ * even bg-status-green/15 for the translucent pill backgrounds) instead of
+ * scattering hex values across every component.
+ */
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-bg: #0d1117;
+  --color-panel: #151b23;
+  --color-border: #2a313c;
+  --color-ink: #e6e8eb;
+  --color-muted: #8b949e;
+  --color-accent: #4c8dff;
+
+  --color-status-green: #2ea043;
+  --color-status-amber: #d29922;
+  --color-status-red: #f85149;
+  --color-status-blue: #4c8dff;
+  --color-status-slate: #8b949e;
 }
 
-* { box-sizing: border-box; }
+/*
+ * @layer components below is deliberate, not a leftover habit from the old
+ * plain-CSS file: these five patterns each recur across 2-8 call sites with
+ * several color/state variants (pill has 6, btn-ghost appears 5 times,
+ * grid-row/grid-head is shared between AgentGrid's header and every
+ * AgentRow). Tailwind's own docs recommend @apply for exactly this case —
+ * genuinely repeated, semantically-named patterns — while everything used
+ * once stays as inline utilities directly in its component. This is a
+ * middle ground, not an attempt to avoid utility classes.
+ */
+@layer components {
+  .mono {
+    @apply font-mono tabular-nums;
+  }
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  .btn-ghost {
+    @apply bg-transparent border border-border text-ink rounded-md px-2.5 py-[5px] cursor-pointer;
+    @apply disabled:opacity-40 disabled:cursor-default;
+  }
+
+  .loading-state,
+  .empty-state,
+  .error-state {
+    @apply p-6 text-muted text-center;
+  }
+  .error-state {
+    @apply text-status-red flex gap-2.5 items-center justify-center;
+  }
+
+  .banner {
+    @apply px-3 py-1.5 rounded-md text-xs;
+  }
+  .banner-info {
+    @apply bg-status-blue/15 text-status-blue;
+  }
+  .banner-warn {
+    @apply bg-status-amber/15 text-status-amber;
+  }
+
+  .pill {
+    @apply inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold whitespace-nowrap;
+  }
+  .pill-green {
+    @apply bg-status-green/15 text-status-green;
+  }
+  .pill-blue {
+    @apply bg-status-blue/15 text-status-blue;
+  }
+  .pill-amber {
+    @apply bg-status-amber/15 text-status-amber;
+  }
+  .pill-red {
+    @apply bg-status-red/15 text-status-red;
+  }
+  .pill-slate {
+    @apply bg-status-slate/15 text-status-slate;
+  }
+  .pill-dashed {
+    @apply border border-dashed border-status-red;
+  }
+
+  /* Shared by AgentGrid's header row and every react-window AgentRow, so
+     they can never drift out of column alignment with each other. */
+  .grid-row {
+    @apply grid items-center gap-x-2.5 px-2.5 border-b border-border;
+    grid-template-columns: 1.6fr 70px 1.8fr 110px 110px 120px 150px 90px;
+  }
+  .grid-row > * {
+    @apply overflow-hidden text-ellipsis whitespace-nowrap;
+  }
+  .grid-head {
+    @apply text-muted font-semibold bg-panel h-[34px];
+  }
+  .grid-head .sortable {
+    @apply cursor-pointer select-none hover:text-ink;
+  }
+
+  .detail-panel {
+    @apply fixed top-0 right-0 bottom-0 w-[380px] bg-panel border-l border-border p-5 overflow-y-auto;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .perf-hud {
+    @apply inline-block px-2.5 py-1 mb-2 border border-dashed border-border rounded-md text-status-amber text-xs;
+  }
 }
-
-.mono { font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-.muted { color: var(--muted); }
-
-.dashboard { padding: 20px 24px 80px; max-width: 1400px; margin: 0 auto; }
-
-.dashboard-header { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
-.dashboard-header h1 { font-size: 18px; margin: 0; }
-
-.banner {
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-.banner-info { background: var(--blue-bg); color: var(--blue); }
-.banner-warn { background: var(--amber-bg); color: var(--amber); }
-
-.filter-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 14px 0 10px;
-  flex-wrap: wrap;
-}
-.filter-bar select {
-  background: var(--panel);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 6px 8px;
-  font: inherit;
-}
-.filter-count { color: var(--muted); margin-left: auto; }
-
-.summary-bar {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  padding: 8px 0 14px;
-  color: var(--muted);
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 10px;
-}
-.summary-item b { color: var(--text); }
-
-.btn-ghost {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 6px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font: inherit;
-}
-.btn-ghost:disabled { opacity: 0.4; cursor: default; }
-
-/* Virtualized grid: react-window absolutely-positions each row via its
-   `style` prop, which only works with a plain div, not a <tr> (a <tr> only
-   lays out correctly as a direct child of a <table>/<tbody>). The 8-column
-   template below is defined once and shared by the header and every row, so
-   they can never drift out of alignment with each other. */
-.agent-grid {
-  background: var(--panel);
-  border-radius: 8px;
-  overflow: hidden;
-}
-.grid-row {
-  display: grid;
-  grid-template-columns: 1.6fr 70px 1.8fr 110px 110px 120px 150px 90px;
-  align-items: center;
-  column-gap: 10px;
-  padding: 0 10px;
-  border-bottom: 1px solid var(--border);
-}
-.grid-row > * {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.grid-head {
-  color: var(--muted);
-  font-weight: 600;
-  background: var(--panel);
-  height: 34px;
-}
-.grid-head .sortable { cursor: pointer; user-select: none; }
-.grid-head .sortable:hover { color: var(--text); }
-.agent-grid [role="row"]:not(.grid-head) { cursor: pointer; }
-.agent-grid [role="row"]:not(.grid-head):hover { background: rgba(255, 255, 255, 0.03); }
-.agent-grid [role="row"].row-attention { background: rgba(248, 81, 73, 0.06); }
-
-.pill {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.pill-green { background: var(--green-bg); color: var(--green); }
-.pill-blue { background: var(--blue-bg); color: var(--blue); }
-.pill-amber { background: var(--amber-bg); color: var(--amber); }
-.pill-red { background: var(--red-bg); color: var(--red); }
-.pill-slate { background: var(--slate-bg); color: var(--slate); }
-.pill-dashed { border: 1px dashed var(--red); }
-
-.loading-state, .empty-state, .error-state {
-  padding: 24px;
-  color: var(--muted);
-  text-align: center;
-}
-.error-state { color: var(--red); display: flex; gap: 10px; align-items: center; justify-content: center; }
-
-.detail-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 380px;
-  background: var(--panel);
-  border-left: 1px solid var(--border);
-  padding: 20px;
-  overflow-y: auto;
-  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.4);
-}
-.detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-.detail-header h2 { margin: 0 0 4px; font-size: 16px; }
-.detail-sub { color: var(--muted); font-size: 12px; }
-.detail-status { display: flex; align-items: center; gap: 10px; margin: 10px 0 18px; }
-
-.call-list { list-style: none; padding: 0; margin: 0; }
-.call-row { padding: 8px 0; border-bottom: 1px solid var(--border); }
-
-.pager { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
-
-.perf-hud {
-  display: inline-block;
-  padding: 4px 10px;
-  margin-bottom: 8px;
-  border: 1px dashed var(--border);
-  border-radius: 6px;
-  color: var(--amber);
-  font-size: 12px;
-}
-.perf-hud b { color: var(--text); }

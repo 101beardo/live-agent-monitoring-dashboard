@@ -18,10 +18,10 @@ export function AgentDetailPanel({ agent, onClose, now }: { agent: AgentState; o
 
   return (
     <div className="detail-panel" role="dialog" aria-label={`${agent.name} details`}>
-      <div className="detail-header">
+      <div className="flex justify-between items-start mb-2.5">
         <div>
-          <h2>{agent.name}</h2>
-          <div className="detail-sub">
+          <h2 className="mb-1 mt-0 text-base">{agent.name}</h2>
+          <div className="text-muted text-xs">
             Ext {agent.extension} · {agent.site} · {agent.queues.join(", ")}
           </div>
         </div>
@@ -30,7 +30,7 @@ export function AgentDetailPanel({ agent, onClose, now }: { agent: AgentState; o
         </button>
       </div>
 
-      <div className="detail-status">
+      <div className="flex items-center gap-2.5 my-2.5 mb-4.5">
         <StatusPill status={status} />
         <span className="mono">
           device: {agent.deviceStatus} · agent: {agent.agentStatus}
@@ -55,14 +55,14 @@ export function AgentDetailPanel({ agent, onClose, now }: { agent: AgentState; o
       )}
 
       {data && data.calls.length > 0 && (
-        <ul className="call-list">
+        <ul className="list-none p-0 m-0">
           {data.calls.map((c) => (
-            <li key={c.callId} className="call-row">
+            <li key={c.callId} className="py-2 border-b border-border">
               <div>
                 <b>{c.queue}</b> · {c.disposition}
-                {isFetching && <span className="mono muted"> (updating…)</span>}
+                {isFetching && <span className="mono text-muted"> (updating…)</span>}
               </div>
-              <div className="mono muted">
+              <div className="mono text-muted">
                 {new Date(c.startedAt).toLocaleString()} · talk {formatDuration(c.talkTimeSeconds)}
                 {c.holdTimeSeconds > 0 ? ` · hold ${formatDuration(c.holdTimeSeconds)}` : ""} · {c.hangupCause}
               </div>
@@ -71,7 +71,7 @@ export function AgentDetailPanel({ agent, onClose, now }: { agent: AgentState; o
         </ul>
       )}
 
-      <div className="pager">
+      <div className="flex items-center gap-2.5 mt-3.5">
         <button type="button" className="btn-ghost" disabled={page === 0} onClick={() => setPage((p) => p - 1)}>
           Prev
         </button>
