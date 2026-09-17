@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchCalls } from "../lib/mockAdapter";
 
-const PAGE_SIZE = 10;
+export const PAGE_SIZE = 10;
 
 export function useAgentCalls(agentId: string | null, page: number) {
   return useQuery({
@@ -17,5 +17,3 @@ export function useAgentCalls(agentId: string | null, page: number) {
     staleTime: 30_000,
   });
 }
-
-export { PAGE_SIZE };
