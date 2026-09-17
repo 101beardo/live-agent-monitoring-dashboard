@@ -6,12 +6,13 @@ import { LiveDuration } from "./LiveDuration";
 import { StatusPill } from "./StatusPill";
 
 function AgentRowImpl({ agent, onSelect }: { agent: AgentState; onSelect: (agentId: string) => void }) {
-  // Each row ticks its own 5s "now" independently, rather than reading one
+  // Each row ticks its own "now" independently, rather than reading one
   // shared context. A single shared ticker would re-render all 300 rows in
-  // the same animation frame every 5s (a visible synchronized jank). 300
-  // independently-phased timers spread that same work smoothly across the
-  // 5s window instead, at negligible cost since the work per tick is trivial.
-  const now = useNow(5000);
+  // the same animation frame every tick (a visible synchronized jank). 300
+  // independently-phased timers spread that same work smoothly instead, at
+  // negligible cost. 15s is plenty against an 8-minute stale threshold —
+  // this only needs to notice staleness eventually, not to the second.
+  const now = useNow(15_000);
   const status = deriveCombinedStatus(agent, now);
   const onCall = status.kind === "on-call";
 

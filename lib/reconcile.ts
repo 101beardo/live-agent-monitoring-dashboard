@@ -165,10 +165,26 @@ export function applyEvents(
 // deriving the supervisor-facing combined status
 // ---------------------------------------------------------------------------
 
-/** No device event for this long -> we no longer trust the agent's displayed
+/**
+ * No device event for this long -> we no longer trust the agent's displayed
  * state. 12 agents in the dataset go silent partway through by design; this
- * is how the UI is meant to catch them rather than showing a frozen lie. */
-export const STALE_THRESHOLD_MS = 90_000;
+ * is how the UI is meant to catch them rather than showing a frozen lie.
+ *
+ * The threshold has to clear the largest gap the generator can legitimately
+ * produce between two device events on one ordinary call, not just guess at
+ * a round number: after the last hold resumes (or straight after Answered)
+ * the call can run up to `bump(20, 400)` = 400s before CallEnded. A threshold
+ * near that, e.g. the 90s I started with, flags a large share of normal
+ * long calls as stale. 8 minutes clears the worst case with real margin.
+ *
+ * The real cost of getting this wrong is asymmetric: too low, and the grid
+ * cries wolf on agents who are fine; too high, and a genuinely dead device
+ * sits undetected longer. I'd rather under-detect than spam supervisors with
+ * false positives, which is the argument for erring high here. The honest
+ * fix is a heartbeat field from the backend instead of inferring liveness
+ * from the shape of call events — see the README's data-contract note.
+ */
+export const STALE_THRESHOLD_MS = 8 * 60_000;
 
 export function deriveCombinedStatus(agent: AgentState, nowMs: number): CombinedStatus {
   if (agent.lastDeviceEventAt) {
