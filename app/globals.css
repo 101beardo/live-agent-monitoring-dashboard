@@ -82,34 +82,40 @@ body {
 }
 .btn-ghost:disabled { opacity: 0.4; cursor: default; }
 
-table.agent-grid {
-  width: 100%;
-  border-collapse: collapse;
+/* Virtualized grid: react-window absolutely-positions each row via its
+   `style` prop, which only works with a plain div, not a <tr> (a <tr> only
+   lays out correctly as a direct child of a <table>/<tbody>). The 8-column
+   template below is defined once and shared by the header and every row, so
+   they can never drift out of alignment with each other. */
+.agent-grid {
   background: var(--panel);
   border-radius: 8px;
   overflow: hidden;
 }
-.agent-grid th {
-  text-align: left;
-  padding: 8px 10px;
+.grid-row {
+  display: grid;
+  grid-template-columns: 1.6fr 70px 1.8fr 110px 110px 120px 150px 90px;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 10px;
   border-bottom: 1px solid var(--border);
+}
+.grid-row > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.grid-head {
   color: var(--muted);
   font-weight: 600;
-  position: sticky;
-  top: 0;
   background: var(--panel);
-  white-space: nowrap;
+  height: 34px;
 }
-.agent-grid th.sortable { cursor: pointer; user-select: none; }
-.agent-grid th.sortable:hover { color: var(--text); }
-.agent-grid td {
-  padding: 7px 10px;
-  border-bottom: 1px solid var(--border);
-  white-space: nowrap;
-}
-.agent-grid tbody tr { cursor: pointer; }
-.agent-grid tbody tr:hover { background: rgba(255, 255, 255, 0.03); }
-.agent-grid tbody tr.row-attention { background: rgba(248, 81, 73, 0.06); }
+.grid-head .sortable { cursor: pointer; user-select: none; }
+.grid-head .sortable:hover { color: var(--text); }
+.agent-grid [role="row"]:not(.grid-head) { cursor: pointer; }
+.agent-grid [role="row"]:not(.grid-head):hover { background: rgba(255, 255, 255, 0.03); }
+.agent-grid [role="row"].row-attention { background: rgba(248, 81, 73, 0.06); }
 
 .pill {
   display: inline-block;
