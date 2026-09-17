@@ -11,6 +11,7 @@ import { FilterBar } from "../components/FilterBar";
 import { SummaryBar } from "../components/SummaryBar";
 import { AgentGrid } from "../components/AgentGrid";
 import { AgentDetailPanel } from "../components/AgentDetailPanel";
+import { PerfHud } from "../components/PerfHud";
 
 function useSelectedAgent() {
   const router = useRouter();
@@ -33,7 +34,16 @@ function useSelectedAgent() {
 }
 
 export function Dashboard() {
-  const { agents, connectionStatus, rosterState, retryRoster } = useAgentStream();
+  const searchParams = useSearchParams();
+  // Debugging/demo-only params, never surfaced in the UI: ?dispatch=naive
+  // reverts to per-event dispatch, ?perf=1 shows the live render-cost HUD.
+  // Together they're how the README's performance numbers were produced.
+  const dispatchMode = searchParams.get("dispatch") === "naive" ? "naive" : "batched";
+  const showPerfHud = searchParams.get("perf") === "1";
+  const rateParam = searchParams.get("rate");
+  const eventsPerSecond = rateParam ? Number(rateParam) : undefined;
+
+  const { agents, connectionStatus, rosterState, retryRoster } = useAgentStream(dispatchMode, eventsPerSecond);
   const { filters, setFilters } = useFilters();
   const { agentId: selectedAgentId, select } = useSelectedAgent();
   const now = useNow(5000);
@@ -68,7 +78,13 @@ export function Dashboard() {
         <>
           <FilterBar queues={queues} sites={sites} visibleCount={visible.length} totalCount={all.length} />
           <SummaryBar agents={all} now={now} />
-          <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />
+          {showPerfHud ? (
+            <PerfHud id="agent-grid">
+              <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />
+            </PerfHud>
+          ) : (
+            <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />
+          )}
         </>
       )}
 

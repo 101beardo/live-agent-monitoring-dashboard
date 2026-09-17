@@ -160,3 +160,14 @@ body {
 .call-row { padding: 8px 0; border-bottom: 1px solid var(--border); }
 
 .pager { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+
+.perf-hud {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  color: var(--amber);
+  font-size: 12px;
+}
+.perf-hud b { color: var(--text); }

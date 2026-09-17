@@ -37,8 +37,14 @@ export type RosterLoadState = "loading" | "error" | "ready";
  * per animation frame — render rate is capped at the display's refresh rate
  * regardless of how fast events arrive. The "reflected within about a
  * second" requirement is met with a huge margin either way.
+ *
+ * `dispatchMode: "naive"` deliberately reintroduces the per-event dispatch
+ * this hook exists to avoid, gated behind `?dispatch=naive` and wired to the
+ * on-screen perf HUD (see PerfHud.tsx) — a real before/after to point at
+ * instead of just asserting the batching helps. Measured numbers are in the
+ * README's performance section.
  */
-export function useAgentStream() {
+export function useAgentStream(dispatchMode: "batched" | "naive" = "batched", eventsPerSecond?: number) {
   const [agents, dispatch] = useReducer(agentsReducer, null);
   const [connectionStatus, setConnectionStatus] = useState<ConnectionStatus>("connecting");
   const [rosterState, setRosterState] = useState<RosterLoadState>("loading");
@@ -63,11 +69,29 @@ export function useAgentStream() {
   useEffect(() => {
     if (rosterState !== "ready") return;
 
+    if (dispatchMode === "naive") {
+      // One dispatch per event, on purpose — this is the thing the batched
+      // path exists to avoid. Kept alive behind a flag instead of deleted so
+      // the render-cost claim is something you can actually toggle and watch,
+      // not just prose in a README.
+      const conn = connect({
+        onEvent: (event) => dispatch({ type: "EVENTS", events: [event] }),
+        onStatusChange: setConnectionStatus,
+        eventsPerSecond,
+      });
+      connRef.current = conn;
+      return () => {
+        conn.close();
+        connRef.current = null;
+      };
+    }
+
     const conn = connect({
       onEvent: (event) => {
         pendingRef.current.push(event);
       },
       onStatusChange: setConnectionStatus,
+      eventsPerSecond,
     });
     connRef.current = conn;
 
@@ -87,7 +111,7 @@ export function useAgentStream() {
       cancelAnimationFrame(raf);
       connRef.current = null;
     };
-  }, [rosterState]);
+  }, [rosterState, dispatchMode, eventsPerSecond]);
 
   return { agents, connectionStatus, rosterState, retryRoster: loadRoster };
 }
