@@ -43,7 +43,7 @@ No environment variables, no backend, no config beyond that.
 Two decisions carry the "don't cost a full re-render every second" requirement:
 
 1. **Batched dispatch, not per-event dispatch.** `useAgentStream` pushes incoming events into a `ref` and flushes the batch into the reducer once per animation frame, instead of dispatching on every `onEvent` callback. At 25 events/sec this already avoids 25 renders/sec of a 300-row grid; the brief states production peaks near 8,000 events/sec, where dispatching per event would be unworkable regardless of memoization downstream. Render rate is capped at the display refresh rate no matter how fast the stream gets.
-2. **Row-level memoization that actually bails.** `AgentRow` is `React.memo`'d on reference equality of its `agent` prop. This only works because the reducer produces a *new* object only for the specific agent an event touched — every other agent's reference in the `Map` is untouched — so a typical event re-renders 1 row out of 300, not all 300.
+2. **Row-level memoization that actually bails.** `AgentRow` is `React.memo`'d on reference equality of its `agent` prop. This only works because the reducer produces a *new* object only for the specific agent an event touched — every other agent's reference in the `Map` is untouched — so a typical event re-renders 1 row out of 300, not all 300. **This bail-out was silently unreachable for most of this project's history** — see "A real bug this caught" below for how a `react-window` render-prop identity bug forced full remounts instead, bypassing memo entirely, and how it was found and fixed.
 3. **`LiveDuration` is the one component that ticks every second**, and the tick is local `useState` inside a single `<span>`. Nothing above it — not the row, not the grid — knows it's ticking. A call timer costs one DOM text-node update, never a grid re-render.
 4. **The grid is virtualized** (`react-window`'s `FixedSizeList`). Only the rows that fit the viewport (~14, plus overscan) are ever mounted — confirmed by counting `.grid-row` elements in the live DOM through scrolling and filtering, not assumed from react-window's docs. At 300 rows this isn't load-bearing; it's built for the brief's stated 2,000-agent production target. The real cost: `react-window` positions rows via an absolutely-positioned `style` prop, which only works on a plain `div`, not a `<tr>` — so the grid gave up native `<table>` markup for `role="table"/"row"/"gridcell"` instead. Header and rows share one `grid-template-columns` definition so they can't drift out of alignment.
 
@@ -57,9 +57,17 @@ The two `useNow` cadences (`hooks/useNow.ts`) are deliberately not one shared co
 
 `AgentDetailPanel` takes an `AgentState` and a couple of callbacks — it has no idea it's rendered from a grid, or that the grid exists. `AgentRow` takes an `agent` and an `onSelect`; it doesn't know what "select" does. Neither is welded to the other.
 
+### Styling
+
+Tailwind v4, CSS-first config (`app/globals.css`'s `@theme` block, no `tailwind.config.js`). The `@theme` block is the one place the dark palette's colors are defined (`--color-panel`, `--color-status-red`, etc.) — every component reads them as real utilities (`bg-panel`, `text-status-red`, even `bg-status-green/15` for the translucent pill backgrounds) instead of hex values scattered across files.
+
+One deliberate departure from "just write utility classes everywhere": five patterns that are genuinely reused across multiple files with several variants — `.pill` (6 color variants), `.btn-ghost` (5 call sites), `.banner`, the shared `.grid-row`/`.grid-head` grid template, and a few state-message classes — are extracted into `@layer components` with `@apply`, which is Tailwind's own documented pattern for exactly this case. Everything used at a single call site stays as inline utilities in its component. This isn't hedging on the tool; it's the same "don't repeat a five-property combination six times" judgment I'd apply in plain CSS, just expressed through Tailwind's extraction mechanism instead of a hand-written class.
+
 ---
 
-## A real bug this caught, worth reading
+## Three real bugs this caught, worth reading
+
+### The clock-domain bug
 
 The mock's `emittedAt` and `snapshotTakenAt` are stamped on the generator's own **fixed simulated calendar day** (September 9), completely decoupled from whatever the real wall-clock date is when the app actually runs. I didn't catch this from reading the brief — I caught it by running the app and seeing every agent marked **Stale** on load, and in-progress calls showing **11,000+ minute** durations.
 
@@ -71,6 +79,16 @@ Two fixes, both anchored on real time instead of the simulated timeline:
 See the commit history (`fix: anchor real-time durations...`) for the full reasoning — I kept it as its own commit rather than folding it into the original feature, since it's a real "I ran this and it was wrong" moment, not a typo.
 
 A second, related tuning bug: my first stale threshold (90s) flagged a large share of ordinary in-progress calls, because the generator can legitimately leave up to 400s between a device event and `CallEnded` on one normal call. Raised to 8 minutes, with the reasoning in `lib/reconcile.ts`.
+
+### The virtualization remount bug — the more serious one
+
+`AgentGrid.tsx`'s row renderer for `react-window`'s `<FixedSizeList>` was originally defined *inside* `AgentGrid`'s own render body. `react-window` uses that function as the rendered element's **type**, not just a callback — so a fresh function identity every render meant React fully unmounted and remounted every visible row on nearly every event batch, silently bypassing `AgentRow`'s `React.memo` the entire time. Confirmed with a temporary mount/unmount log: **1,343 mount/unmount cycles in 4 seconds** for the same ~22 row instances, before the fix; **44 total, all from one one-time transition, then zero** for 9+ seconds of continuous streaming after it. Fixed by moving the row renderer to module scope and passing per-render data through `react-window`'s `itemData` prop instead of a closure. Full writeup, including why the earlier "it's just the Next.js 14→16 toolchain change" theory was an incomplete diagnosis, is in the Performance section below — this bug, not the bundler, was the real reason every performance number up to that point was inflated.
+
+### The detail panel's pagination state didn't reset across agents
+
+`AgentDetailPanel` keeps its current page in local `useState`, and `Dashboard.tsx` originally rendered it with no `key`. Clicking a different agent's row *without closing the panel first* re-renders the same component instance with a new `agent` prop — React has no reason to reset local state for a prop change alone. Page number silently carried over from the previous agent. Traced the actual failure mode: the empty-state message (`data.calls.length === 0 && page === 0`) explicitly excludes non-zero pages, so landing on a stale page 2 for an agent with fewer calls doesn't show an error or an empty message — it shows nothing at all, a blank gap with no explanation.
+
+I found this while checking whether pagination was even reachable in the first place: across all 1,593 call records in `mock/calls.json`, **the busiest agent has 9 calls**, one below `PAGE_SIZE`'s 10 — so "Next" is unconditionally disabled for every agent in this dataset as shipped, and the bug above was latent, not reachable through the UI. Confirmed it's real anyway by temporarily lowering `PAGE_SIZE` to 5 (enough to make pages 2 reachable for several agents), reproducing the exact scenario (an agent with a full page 2, switched directly to one with only 3 calls total), and confirming the blank gap. Fixed with `key={selectedAgent.agentId}` on `<AgentDetailPanel>` in `Dashboard.tsx` — the idiomatic React fix for "a different logical entity should get a fresh component instance," which resets all local state, not just `page`. Re-tested the same switch after the fix: correctly lands on the new agent's page 1. `PAGE_SIZE` is back at 10, its real value — I didn't leave it lowered just to make the demo reachable.
 
 ---
 
@@ -84,19 +102,31 @@ The batched-dispatch claim above is a real measurement, not just reasoning, and 
 
 **Second wrong turn:** a stock `next build` showed **0 commits/sec** even though the grid was visibly updating — standard production React strips `<Profiler>` instrumentation entirely; `onRender` never fires. Needed `next build --profile`, which keeps profiling hooks in an otherwise-production bundle. Worth knowing on its own: if you ever go looking for render numbers in a normal production build and get suspicious zeros, this is why.
 
-**Results** (production + `--profile`, same machine, same dataset):
+**Third wrong turn, found later:** the HUD's rolling window was 1 second, and the mock's per-event jitter (up to 400ms) plus batched dispatch means events land unevenly across animation frames — a 1s window swung between 1 and 79 commits/s for the *identical* config, back to back. That's sampling noise, not signal. Widened the window to 3s (`components/PerfHud.tsx`), which is what the numbers below actually use.
+
+**Fourth wrong turn, and the one that actually mattered:** partway through, the numbers shifted substantially after an unrelated dependency upgrade (Next.js 14→16, Webpack→Turbopack). My first hypothesis was that the new bundler itself was the cause, and I isolated the styling migration that landed in the same window (`git stash`, rebuild with Next 16 but the old plain CSS, re-measure, restore) to rule out CSS as a contributing factor — it wasn't; the numbers came back statistically identical either way, which made sense since Tailwind never touches React's render behavior.
+
+But "blame the bundler" turned out to be an incomplete diagnosis, not the real answer. Digging further (prompted by the numbers looking higher than the architecture should allow, not by a specific complaint) turned up a genuine bug in `AgentGrid.tsx` that had been there since virtualization was first added, unrelated to any toolchain: the `Row` function passed to `react-window`'s `<FixedSizeList>` was defined *inside* `AgentGrid`'s render body, so it was a fresh function on every render. `react-window` renders each row via `createElement(children, itemProps)` — it uses that function as the element's **type**, not just as a callback. A changing type forces React to unmount and remount at that position, every time, regardless of `key`. That completely bypasses `React.memo` on `AgentRow`, since memo only helps when reconciling an *existing* instance against new props — it does nothing for a fresh mount.
+
+Confirmed empirically, not just from reading react-window's source: I added a temporary mount/unmount log to `AgentRow` and watched the console during live streaming. **1,343 mount/unmount log lines in 4 seconds**, for the same ~22 visible+overscanned row instances, cycling continuously. Every row was being destroyed and rebuilt on nearly every event batch. Fixed by moving `Row` to module scope (a stable reference across renders) and passing `agents`/`onSelect` through `react-window`'s `itemData` prop instead of closure capture — `itemData` is a normal prop, safe to change every render, since it doesn't affect the element's type. Re-ran the same diagnostic after the fix: 44 log lines total, all from one single one-time transition, then zero for the rest of a 9-second observation window under continuous streaming.
+
+This means every performance number in earlier drafts of this README — under both Next 14/Webpack and Next 16/Turbopack — was measured against a grid that was silently remounting itself instead of updating in place. The toolchain change didn't cause the expensive numbers; it just changed how expensive the *already-broken* remounting was. The numbers below are the first ones measured against the actually-correct implementation.
+
+**Results** (Next 16, production + `--profile`, Turbopack, post-fix, same machine, same dataset, each cell averaged over three 3-second windows, excluding the first reading after any navigation to avoid startup transients):
 
 | Mode | Rate | Commits/sec | Avg commit | Total render time/sec |
 |---|---|---|---|---|
-| Batched (default) | 25/s (dataset default) | ~19–28 | ~0.36–0.46ms | ~8–13ms |
-| Naive (per-event) | 25/s | ~138 | ~1.17ms | ~161ms |
-| Batched | 500/s (20x load) | ~14 | ~0.29ms | ~4ms |
-| Naive | 500/s | ~121 | ~1.59ms | ~192ms |
+| Batched (default) | 25/s (dataset default) | ~89-95 | ~0.08-0.09ms | ~7-9ms |
+| Naive (per-event) | 25/s | ~132-136 | ~0.07-0.08ms | ~9-11ms |
+| Batched | 500/s (20x load) | ~92-96 | ~0.08-0.10ms | ~7-10ms |
+| Naive | 500/s | ~118-149 | ~0.06-0.08ms | ~7-12ms |
 
-Two things stand out, and I'd rather report both plainly than round them into a cleaner-sounding story:
+What this actually shows, reported plainly rather than rounded into a cleaner story:
 
-- **Batched stayed flat, or even ticked down, when the input rate went up 20x.** That's the actual proof of the architecture claim: render rate is decoupled from event-arrival rate, not just "capped in theory."
-- **Commit *count* for naive (~120–140/s) never actually tracked the raw dispatch rate (25 or 500/s) 1:1 in either direction** — it's higher than 25 and lower than 500. Two things are contributing to that I can't fully separate with this tool: React 18's own scheduler coalescing some rapid successive dispatches even without my batching, and the Profiler counting *every* commit touching the grid's subtree, including the isolated per-row/`LiveDuration` ticks that were specifically designed to be cheap (they show up as extra low-cost commits, not zero commits). The cleaner, more honest signal is **total render time per second** (commits × avg duration): naive costs roughly **15–20x more wall-clock rendering time than batched, at the same input rate**, and that ratio held at both 25/s and 500/s. If I had another hour here, I'd reach for Chrome DevTools' Performance panel (long-task tracking) instead of the Profiler API to get a cleaner separation between "a full grid-relevant update happened" and "one isolated timer ticked."
+- **Average commit duration dropped roughly 8x across both dispatch modes** the moment the remount bug was fixed (batched: ~0.68ms → ~0.08ms; naive: ~0.59ms → ~0.07ms). That's the real signature of `React.memo` finally being reachable: a commit that updates 1-2 changed rows and bails out on ~20 unchanged ones is genuinely cheap, which it was never able to be while every commit was secretly a mass unmount/remount.
+- **Batched staying flat under a 20x load increase still holds, and holds more cleanly than before** — commits/sec barely moves between 25/s and 500/s for either mode. That's the direct proof of the architecture claim: render work is decoupled from event-arrival rate.
+- **The batched-vs-naive gap is now small — roughly 1.1-1.3x, and partly within the noise of these particular runs** (naive @ 500/s ranged 118-149 across samples). Both dispatch modes now share the same cheap per-commit cost, since both go through the same now-correctly-memoized row pipeline; the remaining difference is closer to the more modest cost `useAgentStream`'s naive branch pays for dispatching once per event instead of once per animation frame, not the dramatic multiplier the buggy numbers implied. The architectural argument for batching still stands on its own terms — it's the only one of the two designs that doesn't dispatch at the stream's raw rate, which is what actually matters at the brief's stated 8,000 events/sec production target, well beyond what this 500/s mock can exercise.
+- If I had another hour, I'd reach for Chrome DevTools' Performance panel for the row-level mount/unmount visibility this bug needed to actually catch, rather than a temporary `console.log` in the row component — the Profiler API alone never surfaced this; a mount/unmount count would have.
 
 ## What I left out, and why
 
