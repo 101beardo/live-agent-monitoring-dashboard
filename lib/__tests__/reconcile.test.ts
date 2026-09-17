@@ -65,15 +65,21 @@ describe("applyEvent — ordering guard", () => {
 });
 
 describe("applyEvent — call lifecycle", () => {
-  it("Ringing sets currentCallId and callStartedAt from emittedAt", () => {
+  it("Ringing sets currentCallId and anchors callStartedAt on receivedAt, not the simulated emittedAt", () => {
     const states = new Map([["AG-1000", baseAgent({ lastSequence: 5, currentCallId: null })]]);
     const next = applyEvent(
       states,
-      event({ sequence: 6, status: "Ringing", callId: "CALL-42", emittedAt: "2026-09-09T09:05:00Z" })
+      event({
+        sequence: 6,
+        status: "Ringing",
+        callId: "CALL-42",
+        emittedAt: "2026-09-09T09:05:00Z", // simulated-timeline value — must NOT be used
+        receivedAt: "2026-09-17T10:00:00Z", // real wall-clock value — must be used
+      })
     );
     const a = next.get("AG-1000")!;
     expect(a.currentCallId).toBe("CALL-42");
-    expect(a.callStartedAt).toBe("2026-09-09T09:05:00Z");
+    expect(a.callStartedAt).toBe("2026-09-17T10:00:00Z");
   });
 
   it("CallEnded clears currentCallId and callStartedAt", () => {

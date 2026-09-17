@@ -12,7 +12,29 @@ import type { AgentState, CombinedStatus, RawStreamEvent, RosterSnapshot } from 
 // building the initial map from the roster snapshot
 // ---------------------------------------------------------------------------
 
-export function buildInitialAgentStates(roster: RosterSnapshot): Map<string, AgentState> {
+/**
+ * `now` is the real wall-clock time at the moment the roster was fetched,
+ * NOT `roster.snapshotTakenAt`. Those live in two different clock domains:
+ * `snapshotTakenAt` and every `emittedAt` in the mock data are stamped on the
+ * dataset's own simulated timeline (fixed at generation time), while
+ * staleness detection has to compare against *real* elapsed time. Seeding
+ * `lastDeviceEventAt` from the simulated snapshot time made every agent look
+ * hours or days stale the instant the app loaded, before a single live event
+ * had arrived — caught by actually running it, not by reading the brief.
+ * From the dashboard's point of view the roster was just received, so "now"
+ * is the correct baseline: nobody is stale at t=0, only if we stop hearing
+ * from them for real afterward.
+ */
+export function buildInitialAgentStates(roster: RosterSnapshot, now: string): Map<string, AgentState> {
+  // For an agent already mid-call at snapshot time, `callStartedAt` also
+  // comes stamped on the simulated timeline. Resetting it to `now` would
+  // misrepresent a call that was already, say, 3 minutes in as brand new.
+  // Instead, shift it by the one fixed offset between the snapshot's own
+  // simulated "now" and real wall-clock "now" — this preserves how far into
+  // the call the agent actually was, translated into real time.
+  const offsetMs = new Date(now).getTime() - new Date(roster.snapshotTakenAt).getTime();
+  const toWallClock = (simulatedIso: string) => new Date(new Date(simulatedIso).getTime() + offsetMs).toISOString();
+
   const map = new Map<string, AgentState>();
   for (const a of roster.agents) {
     map.set(a.agentId, {
@@ -25,11 +47,11 @@ export function buildInitialAgentStates(roster: RosterSnapshot): Map<string, Age
       deviceStatus: a.deviceStatus ?? "Unregistered",
       agentStatus: a.agentStatus ?? "LoggedOut",
       currentCallId: a.currentCallId,
-      callStartedAt: a.callStartedAt,
+      callStartedAt: a.callStartedAt ? toWallClock(a.callStartedAt) : null,
       queue: null,
       lastSequence: a.snapshotSeq,
-      lastAppliedAt: roster.snapshotTakenAt,
-      lastDeviceEventAt: a.deviceStatus ? roster.snapshotTakenAt : null,
+      lastAppliedAt: now,
+      lastDeviceEventAt: a.deviceStatus ? now : null,
     });
   }
   return map;
@@ -92,7 +114,12 @@ export function applyEvent(
     switch (event.status) {
       case "Ringing":
         next.currentCallId = event.callId ?? null;
-        next.callStartedAt = event.emittedAt; // call clock starts at ring, not at receipt
+        // Anchored on receivedAt (real Date.now()), not emittedAt. In this
+        // dataset emittedAt sits on a fixed simulated calendar day totally
+        // decoupled from wall-clock time — Date.now() - emittedAt produced
+        // multi-day "live" call durations the moment I actually ran this,
+        // which is how the gap got caught. See README's data-contract note.
+        next.callStartedAt = receivedAt;
         next.queue = event.queue ?? next.queue;
         break;
       case "Answered":
