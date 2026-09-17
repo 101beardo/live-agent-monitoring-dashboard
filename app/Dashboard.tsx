@@ -1,37 +1,19 @@
 "use client";
 
 import { useCallback, useMemo } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useAgentStream } from "../hooks/useAgentStream";
-import { useFilters, type SortKey } from "../hooks/useFilters";
+import { useFilters } from "../hooks/useFilters";
 import { useNow } from "../hooks/useNow";
+import { useSelectedAgent } from "../hooks/useSelectedAgent";
 import { distinctQueuesAndSites, nextSort, selectVisibleAgents } from "../lib/selectors";
+import type { SortKey } from "../lib/types";
 import { ConnectionBanner } from "../components/ConnectionBanner";
 import { FilterBar } from "../components/FilterBar";
 import { SummaryBar } from "../components/SummaryBar";
 import { AgentGrid } from "../components/AgentGrid";
 import { AgentDetailPanel } from "../components/AgentDetailPanel";
 import { PerfHud } from "../components/PerfHud";
-
-function useSelectedAgent() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const params = useSearchParams();
-  const agentId = params.get("agent");
-
-  const select = useCallback(
-    (id: string | null) => {
-      const next = new URLSearchParams(params.toString());
-      if (id) next.set("agent", id);
-      else next.delete("agent");
-      const qs = next.toString();
-      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-    },
-    [params, pathname, router]
-  );
-
-  return { agentId, select };
-}
 
 export function Dashboard() {
   const searchParams = useSearchParams();
@@ -56,10 +38,12 @@ export function Dashboard() {
 
   const selectedAgent = selectedAgentId ? agents?.get(selectedAgentId) ?? null : null;
 
+  const grid = <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />;
+
   return (
-    <div className="dashboard">
-      <header className="dashboard-header">
-        <h1>Live Agent Monitoring</h1>
+    <div className="pt-5 px-6 pb-20 max-w-350 mx-auto">
+      <header className="flex items-center gap-4 mb-3 flex-wrap">
+        <h1 className="text-lg m-0">Live Agent Monitoring</h1>
         <ConnectionBanner status={connectionStatus} />
       </header>
 
@@ -78,17 +62,13 @@ export function Dashboard() {
         <>
           <FilterBar queues={queues} sites={sites} visibleCount={visible.length} totalCount={all.length} />
           <SummaryBar agents={all} now={now} />
-          {showPerfHud ? (
-            <PerfHud id="agent-grid">
-              <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />
-            </PerfHud>
-          ) : (
-            <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />
-          )}
+          {showPerfHud ? <PerfHud id="agent-grid">{grid}</PerfHud> : grid}
         </>
       )}
 
-      {selectedAgent && <AgentDetailPanel agent={selectedAgent} onClose={() => select(null)} now={now} />}
+      {selectedAgent && (
+        <AgentDetailPanel key={selectedAgent.agentId} agent={selectedAgent} onClose={() => select(null)} now={now} />
+      )}
     </div>
   );
 }
