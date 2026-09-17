@@ -5,8 +5,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useAgentStream } from "../hooks/useAgentStream";
 import { useFilters, type SortKey } from "../hooks/useFilters";
 import { useNow } from "../hooks/useNow";
-import { deriveCombinedStatus } from "../lib/reconcile";
-import type { AgentState } from "../lib/types";
+import { distinctQueuesAndSites, nextSort, selectVisibleAgents } from "../lib/selectors";
 import { ConnectionBanner } from "../components/ConnectionBanner";
 import { FilterBar } from "../components/FilterBar";
 import { SummaryBar } from "../components/SummaryBar";
@@ -33,21 +32,6 @@ function useSelectedAgent() {
   return { agentId, select };
 }
 
-function sortValue(agent: AgentState, key: SortKey, now: number) {
-  switch (key) {
-    case "name":
-      return agent.name;
-    case "queue":
-      return agent.queues.join(", ");
-    case "site":
-      return agent.site;
-    case "status":
-      return deriveCombinedStatus(agent, now).kind;
-    case "duration":
-      return agent.callStartedAt ? now - new Date(agent.callStartedAt).getTime() : -1;
-  }
-}
-
 export function Dashboard() {
   const { agents, connectionStatus, rosterState, retryRoster } = useAgentStream();
   const { filters, setFilters } = useFilters();
@@ -55,48 +39,10 @@ export function Dashboard() {
   const now = useNow(5000);
 
   const all = useMemo(() => (agents ? Array.from(agents.values()) : []), [agents]);
+  const { queues, sites } = useMemo(() => distinctQueuesAndSites(all), [all]);
+  const visible = useMemo(() => selectVisibleAgents(all, filters, now), [all, filters, now]);
 
-  const { queues, sites } = useMemo(() => {
-    const q = new Set<string>();
-    const s = new Set<string>();
-    all.forEach((a) => {
-      a.queues.forEach((x) => q.add(x));
-      s.add(a.site);
-    });
-    return { queues: Array.from(q).sort(), sites: Array.from(s).sort() };
-  }, [all]);
-
-  const visible = useMemo(() => {
-    let list = all;
-    if (filters.state !== "all") {
-      list = list.filter((a) => deriveCombinedStatus(a, now).kind === filters.state);
-    }
-    if (filters.queue !== "all") {
-      list = list.filter((a) => a.queues.includes(filters.queue));
-    }
-    if (filters.site !== "all") {
-      list = list.filter((a) => a.site === filters.site);
-    }
-
-    const sorted = [...list].sort((a, b) => {
-      const av = sortValue(a, filters.sort, now);
-      const bv = sortValue(b, filters.sort, now);
-      if (av < bv) return filters.dir === "asc" ? -1 : 1;
-      if (av > bv) return filters.dir === "asc" ? 1 : -1;
-      return 0;
-    });
-    return sorted;
-  }, [all, filters, now]);
-
-  const onSort = useCallback(
-    (key: SortKey) => {
-      setFilters({
-        sort: key,
-        dir: filters.sort === key && filters.dir === "asc" ? "desc" : "asc",
-      });
-    },
-    [filters.sort, filters.dir, setFilters]
-  );
+  const onSort = useCallback((key: SortKey) => setFilters(nextSort(filters, key)), [filters, setFilters]);
 
   const selectedAgent = selectedAgentId ? agents?.get(selectedAgentId) ?? null : null;
 

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { applyEvent, deriveCombinedStatus, STALE_THRESHOLD_MS } from "../reconcile";
-import type { AgentState, RawStreamEvent } from "../types";
+import { applyEvent, applyEvents, buildInitialAgentStates, deriveCombinedStatus, STALE_THRESHOLD_MS } from "../reconcile";
+import type { AgentState, RawStreamEvent, RosterSnapshot } from "../types";
 
 function baseAgent(overrides: Partial<AgentState> = {}): AgentState {
   return {
@@ -131,5 +131,93 @@ describe("deriveCombinedStatus", () => {
     const staleSince = new Date(now - STALE_THRESHOLD_MS - 1000).toISOString();
     const a = baseAgent({ agentStatus: "LoggedOut", lastDeviceEventAt: staleSince });
     expect(deriveCombinedStatus(a, now)).toEqual({ kind: "logged-out" });
+  });
+});
+
+describe("applyEvent — boundary case", () => {
+  it("discards an event whose sequence exactly equals lastSequence, not just lower", () => {
+    // Off-by-one is the classic place this guard breaks: <= must be used,
+    // not <, or the very next legitimate event after a duplicate gets stuck.
+    const states = new Map([["AG-1000", baseAgent({ lastSequence: 6 })]]);
+    const next = applyEvent(states, event({ sequence: 6 }));
+    expect(next).toBe(states);
+  });
+});
+
+describe("applyEvents — batches with internal disorder", () => {
+  it("applies a batch out of order correctly regardless of array order", () => {
+    // requestAnimationFrame flushes whatever landed in the ref buffer since
+    // the last frame — that buffer can itself contain events out of sequence
+    // order for the same agent. applyEvents must not assume the array it's
+    // handed is already sorted.
+    const states = new Map([["AG-1000", baseAgent({ lastSequence: 5 })]]);
+    const batch: RawStreamEvent[] = [
+      event({ eventId: "e1", sequence: 8, status: "Answered", callId: "CALL-1" }),
+      event({ eventId: "e2", sequence: 6, status: "Ringing", callId: "CALL-1" }),
+      event({ eventId: "e3", sequence: 7, status: "Ringing", callId: "CALL-1" }), // duplicate-ish, lower than e1
+    ];
+    const next = applyEvents(states, batch);
+    const a = next.get("AG-1000")!;
+    // The array-order-first event (sequence 8) wins because applyEvent only
+    // ever accepts a strictly higher sequence than what's already applied —
+    // once 8 lands, the later-processed 6 and 7 are both discarded even
+    // though they appear "before" it in wall-clock terms. Documented in
+    // reconcile.ts: we never fabricate an intermediate state.
+    expect(a.lastSequence).toBe(8);
+    expect(a.deviceStatus).toBe("Answered");
+  });
+});
+
+describe("buildInitialAgentStates — simulated-to-wall-clock offset", () => {
+  function roster(overrides: Partial<RosterSnapshot["agents"][number]> = {}): RosterSnapshot {
+    return {
+      snapshotTakenAt: "2026-09-09T09:00:00Z", // the mock's fixed simulated timeline
+      totalAgents: 1,
+      agents: [
+        {
+          agentId: "AG-1000",
+          name: "Test Agent",
+          extension: "2000",
+          email: "test@example-cx.com",
+          queues: ["Billing"],
+          team: "Team Alpha",
+          site: "Bangalore",
+          shiftStart: "09:00",
+          deviceStatus: "Ringing",
+          agentStatus: "Available",
+          currentCallId: "CALL-1",
+          callStartedAt: "2026-09-09T08:57:00Z", // 3 minutes before the simulated snapshot
+          statusChangedAt: "2026-09-09T08:57:00Z",
+          snapshotSeq: 3,
+          ...overrides,
+        },
+      ],
+    };
+  }
+
+  it("shifts an in-progress call's callStartedAt by the real elapsed offset, not to zero", () => {
+    const realNow = "2026-09-17T10:00:00Z"; // days after the simulated snapshot
+    const states = buildInitialAgentStates(roster(), realNow);
+    const a = states.get("AG-1000")!;
+    // 3 minutes before the simulated snapshot -> 3 minutes before real "now",
+    // i.e. the call should still read as ~3 minutes in, not brand new.
+    expect(a.callStartedAt).toBe("2026-09-17T09:57:00.000Z");
+  });
+
+  it("seeds staleness tracking at real 'now', not the simulated snapshot time", () => {
+    const realNow = "2026-09-17T10:00:00Z";
+    const states = buildInitialAgentStates(roster(), realNow);
+    const a = states.get("AG-1000")!;
+    expect(a.lastDeviceEventAt).toBe(realNow);
+    expect(a.lastAppliedAt).toBe(realNow);
+  });
+
+  it("leaves callStartedAt null for an agent who isn't on a call", () => {
+    const realNow = "2026-09-17T10:00:00Z";
+    const states = buildInitialAgentStates(
+      roster({ currentCallId: null, callStartedAt: null, deviceStatus: "Registered" }),
+      realNow
+    );
+    expect(states.get("AG-1000")!.callStartedAt).toBeNull();
   });
 });
