@@ -1,10 +1,40 @@
+import { memo } from "react";
 import { FixedSizeList, type ListChildComponentProps } from "react-window";
-import type { AgentState } from "../lib/types";
-import type { SortDir, SortKey } from "../hooks/useFilters";
+import type { AgentState, SortDir, SortKey } from "../lib/types";
 import { AgentRow } from "./AgentRow";
 
 const ROW_HEIGHT = 40;
 const LIST_HEIGHT = 560;
+
+interface RowData {
+  agents: AgentState[];
+  onSelect: (agentId: string) => void;
+}
+
+/**
+ * Defined at module scope, not inside AgentGrid, and this is load-bearing,
+ * not style preference. react-window renders each row via
+ * `createElement(children, itemProps)` — it uses the `children` render prop
+ * as the element's TYPE, not just calling it as a function. A component
+ * defined inside another component's body is a NEW type on every render, and
+ * a type change forces React to unmount and remount, never just re-render —
+ * which bypasses AgentRow's React.memo entirely, since memo only helps when
+ * reconciling an EXISTING instance against new props, not a fresh mount.
+ *
+ * Confirmed empirically: with the Row closure defined inline (the original
+ * version), every visible + overscanned row was destroying and recreating
+ * itself on nearly every event batch — 1,343 mount/unmount cycles logged in
+ * 4 seconds for the same ~22 row instances. AgentRow's memo comparator never
+ * got a chance to run for almost any of that. Moving Row here and passing
+ * `agents`/`onSelect` through react-window's `itemData` (a normal prop, safe
+ * to change every render) instead of closure capture keeps Row's identity
+ * stable, so updates reconcile in place and the memo bail-out actually fires.
+ */
+const Row = memo(function Row({ index, style, data }: ListChildComponentProps<RowData>) {
+  const agent = data.agents[index];
+  if (!agent) return null;
+  return <AgentRow agent={agent} onSelect={data.onSelect} style={style} />;
+});
 
 export function AgentGrid({
   agents,
@@ -25,14 +55,13 @@ export function AgentGrid({
 
   const arrow = (key: SortKey) => (sort === key ? (dir === "asc" ? " ▲" : " ▼") : "");
 
-  const Row = ({ index, style }: ListChildComponentProps) => {
-    const agent = agents[index];
-    if (!agent) return null;
-    return <AgentRow agent={agent} onSelect={onSelect} style={style} />;
-  };
-
   return (
-    <div className="agent-grid" role="table" aria-label="Agent roster" aria-rowcount={agents.length}>
+    <div
+      className="bg-panel rounded-lg overflow-hidden"
+      role="table"
+      aria-label="Agent roster"
+      aria-rowcount={agents.length}
+    >
       <div className="grid-row grid-head" role="row">
         <div role="columnheader" className="sortable" onClick={() => onSort("name")}>
           Agent{arrow("name")}
@@ -58,7 +87,14 @@ export function AgentGrid({
           of whether `agents` has 300 entries or the production-scale 2,000+
           the brief describes. Scrolling swaps which AgentRow instances are
           mounted; it does not grow the DOM. */}
-      <FixedSizeList height={LIST_HEIGHT} width="100%" itemCount={agents.length} itemSize={ROW_HEIGHT} overscanCount={8}>
+      <FixedSizeList
+        height={LIST_HEIGHT}
+        width="100%"
+        itemCount={agents.length}
+        itemSize={ROW_HEIGHT}
+        overscanCount={8}
+        itemData={{ agents, onSelect }}
+      >
         {Row}
       </FixedSizeList>
     </div>
