@@ -119,3 +119,21 @@ export interface Call {
 }
 
 export type ConnectionStatus = "connecting" | "open" | "closed";
+
+/**
+ * View state, not domain state — lives here anyway because it's shared
+ * across a layer boundary: `hooks/useFilters.ts` owns it, `lib/selectors.ts`
+ * (pure, no React) consumes it. Defining it inside the hook would mean the
+ * pure `lib/` layer importing a type from `hooks/`, backwards from this
+ * codebase's rule that `lib/` never depends on React.
+ */
+export type SortKey = "name" | "queue" | "site" | "status" | "duration";
+export type SortDir = "asc" | "desc";
+
+export interface Filters {
+  state: string; // CombinedStatus["kind"] | "all" — loosely typed since it round-trips through an untrusted URL param
+  queue: string; // queue name | "all"
+  site: string; // site name | "all"
+  sort: SortKey;
+  dir: SortDir;
+}

@@ -2,19 +2,16 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
-
-export type SortKey = "name" | "queue" | "site" | "status" | "duration";
-export type SortDir = "asc" | "desc";
-
-export interface Filters {
-  state: string; // CombinedStatus["kind"] | "all"
-  queue: string; // queue name | "all"
-  site: string; // site name | "all"
-  sort: SortKey;
-  dir: SortDir;
-}
+import type { Filters, SortDir, SortKey } from "../lib/types";
 
 const DEFAULTS: Filters = { state: "all", queue: "all", site: "all", sort: "name", dir: "asc" };
+
+/** Whether any of the three filter fields (state/queue/site — not sort/dir)
+ * differ from default. The single source of truth for "is a filter active,"
+ * so callers like FilterBar's Clear-filters button never hardcode "all". */
+export function hasActiveFilters(filters: Filters): boolean {
+  return filters.state !== DEFAULTS.state || filters.queue !== DEFAULTS.queue || filters.site !== DEFAULTS.site;
+}
 
 /**
  * Filter/sort state lives in the URL, not component state — requirement 4

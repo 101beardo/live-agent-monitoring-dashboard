@@ -6,9 +6,8 @@
  * actually work" was only checkable by clicking through the UI.
  */
 
-import type { Filters, SortKey } from "../hooks/useFilters";
 import { deriveCombinedStatus } from "./reconcile";
-import type { AgentState } from "./types";
+import type { AgentState, Filters, SortKey } from "./types";
 
 export function distinctQueuesAndSites(agents: AgentState[]): { queues: string[]; sites: string[] } {
   const q = new Set<string>();
