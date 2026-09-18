@@ -57,6 +57,8 @@ The two `useNow` cadences (`hooks/useNow.ts`) are deliberately not one shared co
 
 `AgentDetailPanel` takes an `AgentState` and a couple of callbacks — it has no idea it's rendered from a grid, or that the grid exists. `AgentRow` takes an `agent` and an `onSelect`; it doesn't know what "select" does. Neither is welded to the other.
 
+`LoadingState`/`ErrorState`/`EmptyState` are three one-line presentational components extracted after noticing the same shape (a centered message, `ErrorState` additionally pairing it with a `Retry` button) repeated across 7 call sites in 4 files — the roster load, the call-history load, and the filtered-to-empty grid all hit the same three states. Deliberately not extracted further than this: the detail panel's Prev/Next pager has exactly one call site, so it stays inline rather than becoming a component for reuse that doesn't exist yet.
+
 ### Styling
 
 Tailwind v4, CSS-first config (`app/globals.css`'s `@theme` block, no `tailwind.config.js`). The `@theme` block is the one place the dark palette's colors are defined (`--color-panel`, `--color-status-red`, etc.) — every component reads them as real utilities (`bg-panel`, `text-status-red`, even `bg-status-green/15` for the translucent pill backgrounds) instead of hex values scattered across files.
