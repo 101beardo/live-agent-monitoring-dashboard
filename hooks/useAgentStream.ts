@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
-import { connect, fetchAgents, type Connection } from "../lib/mockAdapter";
+import { connect, fetchAgents } from "../lib/mockAdapter";
 import { applyEvents, buildInitialAgentStates } from "../lib/reconcile";
 import type { AgentState, ConnectionStatus, RawStreamEvent, RosterSnapshot } from "../lib/types";
 
@@ -49,7 +49,6 @@ export function useAgentStream(dispatchMode: "batched" | "naive" = "batched", ev
   const [connectionStatus, setConnectionStatus] = useState<ConnectionStatus>("connecting");
   const [rosterState, setRosterState] = useState<RosterLoadState>("loading");
   const pendingRef = useRef<RawStreamEvent[]>([]);
-  const connRef = useRef<Connection | null>(null);
 
   const loadRoster = useCallback(async () => {
     setRosterState("loading");
@@ -79,10 +78,8 @@ export function useAgentStream(dispatchMode: "batched" | "naive" = "batched", ev
         onStatusChange: setConnectionStatus,
         eventsPerSecond,
       });
-      connRef.current = conn;
       return () => {
         conn.close();
-        connRef.current = null;
       };
     }
 
@@ -93,7 +90,6 @@ export function useAgentStream(dispatchMode: "batched" | "naive" = "batched", ev
       onStatusChange: setConnectionStatus,
       eventsPerSecond,
     });
-    connRef.current = conn;
 
     let raf = 0;
     const flush = () => {
@@ -109,7 +105,6 @@ export function useAgentStream(dispatchMode: "batched" | "naive" = "batched", ev
     return () => {
       conn.close();
       cancelAnimationFrame(raf);
-      connRef.current = null;
     };
   }, [rosterState, dispatchMode, eventsPerSecond]);
 

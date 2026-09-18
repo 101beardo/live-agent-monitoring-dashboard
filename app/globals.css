@@ -66,17 +66,25 @@
   .pill {
     @apply inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold whitespace-nowrap;
   }
+  /* pill-green/blue/red use a lighter /10 tint, not /15 like the rest of the
+     palette: at this pill's 11px text size, WCAG AA needs 4.5:1 and these
+     three measured 4.21-4.39:1 at /15 against the panel background (verified
+     by computing the actual blended background color, not eyeballed) —
+     borderline-failing on the single most glanced-at element in the app.
+     Dropping to /10 clears 4.5:1 for all three without touching the text
+     color or the palette itself. pill-amber/slate already pass at /15
+     (5.38:1 / 4.51:1) so they're untouched. */
   .pill-green {
-    @apply bg-status-green/15 text-status-green;
+    @apply bg-status-green/10 text-status-green;
   }
   .pill-blue {
-    @apply bg-status-blue/15 text-status-blue;
+    @apply bg-status-blue/10 text-status-blue;
   }
   .pill-amber {
     @apply bg-status-amber/15 text-status-amber;
   }
   .pill-red {
-    @apply bg-status-red/15 text-status-red;
+    @apply bg-status-red/10 text-status-red;
   }
   .pill-slate {
     @apply bg-status-slate/15 text-status-slate;
