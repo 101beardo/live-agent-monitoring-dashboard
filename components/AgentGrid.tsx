@@ -10,6 +10,7 @@ const LIST_HEIGHT = 560;
 interface RowData {
   agents: AgentState[];
   onSelect: (agentId: string) => void;
+  selectedAgentId: string | null;
 }
 
 /**
@@ -34,7 +35,14 @@ interface RowData {
 const Row = memo(function Row({ index, style, data }: ListChildComponentProps<RowData>) {
   const agent = data.agents[index];
   if (!agent) return null;
-  return <AgentRow agent={agent} onSelect={data.onSelect} style={style} />;
+  return (
+    <AgentRow
+      agent={agent}
+      onSelect={data.onSelect}
+      style={style}
+      isSelected={agent.agentId === data.selectedAgentId}
+    />
+  );
 });
 
 export function AgentGrid({
@@ -43,12 +51,14 @@ export function AgentGrid({
   sort,
   dir,
   onSort,
+  selectedAgentId,
 }: {
   agents: AgentState[];
   onSelect: (agentId: string) => void;
   sort: SortKey;
   dir: SortDir;
   onSort: (key: SortKey) => void;
+  selectedAgentId: string | null;
 }) {
   if (agents.length === 0) {
     return <EmptyState message="No agents match the current filters." />;
@@ -94,7 +104,7 @@ export function AgentGrid({
         itemCount={agents.length}
         itemSize={ROW_HEIGHT}
         overscanCount={8}
-        itemData={{ agents, onSelect }}
+        itemData={{ agents, onSelect, selectedAgentId }}
       >
         {Row}
       </FixedSizeList>

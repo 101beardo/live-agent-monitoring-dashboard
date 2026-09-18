@@ -40,7 +40,16 @@ export function Dashboard() {
 
   const selectedAgent = selectedAgentId ? agents?.get(selectedAgentId) ?? null : null;
 
-  const grid = <AgentGrid agents={visible} onSelect={select} sort={filters.sort} dir={filters.dir} onSort={onSort} />;
+  const grid = (
+    <AgentGrid
+      agents={visible}
+      onSelect={select}
+      sort={filters.sort}
+      dir={filters.dir}
+      onSort={onSort}
+      selectedAgentId={selectedAgentId}
+    />
+  );
 
   return (
     <div className="pt-5 px-6 pb-20 max-w-350 mx-auto">
