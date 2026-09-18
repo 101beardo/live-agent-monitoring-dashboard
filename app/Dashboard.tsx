@@ -14,6 +14,8 @@ import { SummaryBar } from "../components/SummaryBar";
 import { AgentGrid } from "../components/AgentGrid";
 import { AgentDetailPanel } from "../components/AgentDetailPanel";
 import { PerfHud } from "../components/PerfHud";
+import { LoadingState } from "../components/LoadingState";
+import { ErrorState } from "../components/ErrorState";
 
 export function Dashboard() {
   const searchParams = useSearchParams();
@@ -47,15 +49,10 @@ export function Dashboard() {
         <ConnectionBanner status={connectionStatus} />
       </header>
 
-      {rosterState === "loading" && <div className="loading-state">Loading roster…</div>}
+      {rosterState === "loading" && <LoadingState message="Loading roster…" />}
 
       {rosterState === "error" && (
-        <div className="error-state">
-          Couldn't load the agent roster.
-          <button type="button" className="btn-ghost" onClick={retryRoster}>
-            Retry
-          </button>
-        </div>
+        <ErrorState message="Couldn't load the agent roster." onRetry={retryRoster} />
       )}
 
       {rosterState === "ready" && agents && (

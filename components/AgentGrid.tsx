@@ -2,6 +2,7 @@ import { memo } from "react";
 import { FixedSizeList, type ListChildComponentProps } from "react-window";
 import type { AgentState, SortDir, SortKey } from "../lib/types";
 import { AgentRow } from "./AgentRow";
+import { EmptyState } from "./EmptyState";
 
 const ROW_HEIGHT = 40;
 const LIST_HEIGHT = 560;
@@ -50,7 +51,7 @@ export function AgentGrid({
   onSort: (key: SortKey) => void;
 }) {
   if (agents.length === 0) {
-    return <div className="empty-state">No agents match the current filters.</div>;
+    return <EmptyState message="No agents match the current filters." />;
   }
 
   const arrow = (key: SortKey) => (sort === key ? (dir === "asc" ? " ▲" : " ▼") : "");

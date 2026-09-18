@@ -6,6 +6,9 @@ import type { AgentState } from "../lib/types";
 import { formatDuration } from "../lib/format";
 import { StatusPill } from "./StatusPill";
 import { deriveCombinedStatus } from "../lib/reconcile";
+import { LoadingState } from "./LoadingState";
+import { ErrorState } from "./ErrorState";
+import { EmptyState } from "./EmptyState";
 
 export function AgentDetailPanel({ agent, onClose, now }: { agent: AgentState; onClose: () => void; now: number }) {
   const [page, setPage] = useState(0);
@@ -39,19 +42,12 @@ export function AgentDetailPanel({ agent, onClose, now }: { agent: AgentState; o
 
       <h3>Recent calls</h3>
 
-      {isLoading && <div className="loading-state">Loading call history…</div>}
+      {isLoading && <LoadingState message="Loading call history…" />}
 
-      {isError && (
-        <div className="error-state">
-          Couldn't load call history.
-          <button type="button" className="btn-ghost" onClick={() => refetch()}>
-            Retry
-          </button>
-        </div>
-      )}
+      {isError && <ErrorState message="Couldn't load call history." onRetry={() => refetch()} />}
 
       {data && data.calls.length === 0 && page === 0 && (
-        <div className="empty-state">No call history for this agent yet.</div>
+        <EmptyState message="No call history for this agent yet." />
       )}
 
       {data && data.calls.length > 0 && (
